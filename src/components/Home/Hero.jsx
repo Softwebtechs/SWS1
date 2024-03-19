@@ -1,6 +1,14 @@
-import React from "react";
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
+import React from "react";
+
+import Content1 from "./Content/Content1";
+import Content2 from "./Content/Content2";
+import Content3 from "./Content/Content3";
+import Content4 from "./Content/Content4";
+import Content5 from "./Content/Content5";
+import Content6 from "./Content/Content6";
+import Content7 from "./Content/Content7";
 const Hero = () => {
   return (
     <>
@@ -39,6 +47,14 @@ const Hero = () => {
           <ArrowForwardIosIcon />
         </div>
       </div>
+
+      <Content1 />
+      <Content2 />
+      <Content3 />
+      <Content4 />
+      <Content5 />
+      <Content6 />
+      <Content7 />
     </>
   );
 };

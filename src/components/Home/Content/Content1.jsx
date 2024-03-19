@@ -1,5 +1,5 @@
 import React from "react";
-import dotIcon from "../../assets/icons/dotIcon.png";
+import dotIcon from "../../../assets/icons/dotIcon.png";
 
 const Content1 = () => {
   return (

@@ -1,9 +1,9 @@
 import React from "react";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import atIcon from "../../assets/icons/atIcon.png";
-import csIcon from "../../assets/icons/csIcon.png";
-import dtIcon from "../../assets/icons/dtIcon.png";
-import expertIcon from "../../assets/icons/expertIcon.png";
+import atIcon from "../../../assets/icons/atIcon.png";
+import csIcon from "../../../assets/icons/csIcon.png";
+import dtIcon from "../../../assets/icons/dtIcon.png";
+import expertIcon from "../../../assets/icons/expertIcon.png";
 
 const Content2 = () => {
   return (
@@ -43,7 +43,7 @@ const Content2 = () => {
             <div className="w-3/4 text-center">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
-                labore quis similique corrupti, nam laudantium sed non.
+                labore .
               </p>
             </div>
             <ArrowForwardIcon />

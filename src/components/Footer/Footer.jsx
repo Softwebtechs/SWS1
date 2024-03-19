@@ -1,13 +1,13 @@
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import EmailIcon from "@material-ui/icons/Email";
 import FacebookIcon from "@material-ui/icons/Facebook";
-import TwitterIcon from "@material-ui/icons/Twitter";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import SendIcon from "@material-ui/icons/Send";
+import TwitterIcon from "@material-ui/icons/Twitter";
 import React from "react";
-import img from "../assets/img.png";
+import img from "../../assets/img.png";
 
 const Footer = () => {
   return (
