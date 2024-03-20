@@ -141,14 +141,14 @@ const Hero = () => {
       </div>
 
       <div className="flex flex-col">
-        <div className="h-64  bg-white pt-10 ml-56 ">
-          <div className="flex flex-col gap-4 ml-5">
-            <h1 className="text-blue-900 text-4xl font-bold ">
+        <div className="h-64  bg-white pt-0 sm:ml-56 ml-5  ">
+          <div className="sm:flex flex-col sm:mt-0 mt-96 sm:pt-0 pt-20 gap-5 ml-5 sm:mb-10">
+            <h1 className="text-blue-900  text-2xl md:text-4xl font-bold m-5 sm:px-36  ">
               Subscribe <span className="text-orange-500 ">For Newsletter</span>
             </h1>
-            <div className="flex flex-row items-center gap-20 mb-20">
-              <p>Sign up to get latest updates and news</p>
-              <div className="flex flex-row max-w-screen-md gap-5">
+            <div className="md:flex flex-col md:flex-row items-center justify-center  m-5 sm:px-36 ">
+              <p className='w-full mb-5 sm:mb-0'>Sign up to get latest updates and news</p>
+              <div className="flex flex-row max-w-screen-md gap-5 mb ">
                 <input
                   className="border w-96 h-10 p-3 text-gray-400"
                   type="text"
