@@ -15,9 +15,9 @@ const Navbar = () => {
   return (
     <>
       <div className="flex flex-col font-sans">
-        <div className="sm:flex justify-between  md:px-56  p-4 mt-3 bg-blue-950 text-sm text-gray-400 flex flex-col gap-3 md:flex-row">
+        <div className="sm:flex-col xl-flex-row md:p-9 lg:px-44  justify-between  md:px-44 lg:p-4  p-4 mt-3 bg-blue-950 text-sm text-gray-400 flex flex-col gap-3 md:flex-col lg:flex-col xl:flex-row">
           <div className="flex md:flex-row gap-5 items-center justify-center ">
-            <p>
+            <p className="hover:text-white">
               <PhoneIcon
                 style={{
                   height: "15px",
@@ -30,7 +30,7 @@ const Navbar = () => {
               1-800-123-45678
             </p>
             <p className="text-gray-500">|</p>
-            <p>
+            <p className="hover:text-white">
               <EmailIcon
                 style={{
                   color: "gray",
@@ -42,8 +42,8 @@ const Navbar = () => {
               support@domain.com
             </p>
           </div>
-          <div className="flex gap-5 md:flex-row flex-col items-center justify-center ">
-            <p>
+          <div className="flex gap-5 lg:flex-row flex-col items-center justify-center w-auto md:flex-row md:flex md:justify-between ">
+            <p className="hover:text-white">
               {" "}
               <EmailIcon
                 style={{
@@ -55,7 +55,7 @@ const Navbar = () => {
               />{" "}
               Working hours - Mon - Fri: 8:30 - 18:30{" "}
             </p>
-            <p className="text-gray-500 hidden ">|</p>
+            <p className="text-gray-500 hidden hover:text-white ">|</p>
             <div className="flex gap-2 items-center justify-center">
               <TwitterIcon
                 style={{
@@ -63,6 +63,7 @@ const Navbar = () => {
                   color: "gray",
                   marginBottom: " 4px",
                   marginRight: "4px",
+                  
                 }}
               />
               <FacebookIcon
@@ -95,18 +96,18 @@ const Navbar = () => {
 
         <header className="shadow sticky z-50 ">
           <nav className=" bg-white border-gray-200  lg:px-6 py-2.5">
-            <div className="flex sm:flex-row flex-col gap-3 md:justify-between sm:px-48 items-center p-5 ">
+            <div className="flex lg:flex-row flex-col gap-3 md:justify-between sm:px-48 items-center p-5 ">
               <div>
                 <Link to="/" className="flex items-center">
                   <img src={pIcon} className="mr-3 h-12" alt="Logo" />
-                  <h1 className="text-2xl text-blue-950 cursor-pointer font-bold">
+                  <h1 className="text-2xl text-blue-950 cursor-pointer font-bold md:flex  ">
                     PATRAI
                   </h1>
                 </Link>
               </div>
 
               <div className="">
-                <ul className="sm:flex sm:flex-col hidden mt-4 text-sm font-normal lg:flex-row lg:space-x-6 lg:mt-0">
+                <ul className=" sm:flex-col hidden mt-4 text-sm font-normal lg:flex-row lg:space-x-6 lg:mt-0 xl:flex  lg:hidden">
                   <li>
                     <NavLink
                       to="/"
@@ -201,7 +202,7 @@ const Navbar = () => {
                     </div>
                   </div>
                 </ul>
-                <div className=" sm:hidden flex gap-6 ">
+                <div className=" xl:hidden flex gap-6  ">
                   <div className="flex gap-2">
                     <MenuIcon />
                     <h1>Menu</h1>
@@ -220,8 +221,8 @@ const Navbar = () => {
             </div>
           </nav>
         </header>
-        <div className='md:h-36 h-56 bg-blue-950  md:flex-row  md:justify-between px-48 items-center flex flex-col gap-6 justify-center'>
-             <h1 className='text-white font-semibold md:text-6xl text-5xl'>Career</h1>
+        <div className='md:h-36 h-56 bg-blue-950  md:flex-row  md:justify-between px-48 md:px-10 xl:px-28 items-center flex flex-col gap-6 justify-center'>
+             <h1 className='text-white font-semibold md:text-4xl xl:text-6xl text-6xl'>Career</h1>
             <div className='text-white md:flex-row flex-col'>
               <div className="flex flex-row gap-5 ">
                 <h1 className='text-lg text-gray-300'>HOME</h1>
