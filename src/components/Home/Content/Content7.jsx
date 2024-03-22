@@ -6,8 +6,8 @@ const Content7 = () => {
   return (
     <>
       <div className="h-screen p-16 ">
-        <div className="flex justify-around items-center px-16 ">
-          <h1 className="text-2xl font-bold text-blue-900">
+        <div className="flex flex-row  justify-around items-center sm:gap-48">
+          <h1 className="sm:text-6xl text-3xl font-bold text-blue-900 sm:ml-0 ml-12 mb-5">
             Latest from <span className="text-orange-500">Blog</span>
           </h1>
           <div className="flex gap-1">
@@ -19,14 +19,14 @@ const Content7 = () => {
             </div>
           </div>
         </div>
-        <div className="flex flex-row items-center justify-center">
-          <div className=" m-5 mt-10">
-            <div className="h-44 w-64 bg-blue-900 pt-28 ">
+        <div className="sm:flex sm:flex-row flex-col items-center justify-center">
+          <div className=" m-5 sm:mt-10 flex flex-row gap-10 ">
+            <div className="h-80 w-96 bg-blue-900 pt-64 sm:flex sm:flex-col ">
               <div className="h-12 w-12 bg-orange-500 ml-4 flex flex-col justify-center items-center  ">
                 <h1 className="font-bold text-white text-xl">05</h1>
                 <h1 className="font-bold text-white text-sm">AUG</h1>
               </div>
-              <div className="h-64 w-56 bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
+              <div className="h-64 w-[350px] bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
                 <h1 className="text-blue-900 font-bold text-lg">
                   Production of goods <br /> or related services <br /> within
                   an economy
@@ -42,14 +42,12 @@ const Content7 = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div className=" m-5 mt-10">
-            <div className="h-44 w-64 bg-blue-900 pt-28 ">
-              <div className="h-12 w-12 bg-orange-500 ml-4 flex flex-col justify-center items-center   ">
+            <div className="h-80 w-96 bg-blue-900 pt-64 sm:flex sm:flex-col hidden">
+              <div className="h-12 w-12 bg-orange-500 ml-4 flex flex-col justify-center items-center  ">
                 <h1 className="font-bold text-white text-xl">05</h1>
                 <h1 className="font-bold text-white text-sm">AUG</h1>
               </div>
-              <div className="h-64 w-56 bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
+              <div className="h-64 w-[350px] bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
                 <h1 className="text-blue-900 font-bold text-lg">
                   Production of goods <br /> or related services <br /> within
                   an economy
@@ -65,14 +63,12 @@ const Content7 = () => {
                 </a>
               </div>
             </div>
-          </div>
-          <div className=" m-5 mt-10">
-            <div className="h-44 w-64 bg-blue-900 pt-28 ">
-              <div className="h-12 w-12 bg-orange-500 ml-4 flex flex-col justify-center items-center ">
+            <div className="h-80 w-96 bg-blue-900 pt-64 sm:flex sm:flex-col hidden">
+              <div className="h-12 w-12 bg-orange-500 ml-4 flex flex-col justify-center items-center  ">
                 <h1 className="font-bold text-white text-xl">05</h1>
                 <h1 className="font-bold text-white text-sm">AUG</h1>
               </div>
-              <div className="h-64 w-56 bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
+              <div className="h-64 w-[350px] bg-white ml-4 drop-shadow-md flex flex-col p-6 gap-5">
                 <h1 className="text-blue-900 font-bold text-lg">
                   Production of goods <br /> or related services <br /> within
                   an economy

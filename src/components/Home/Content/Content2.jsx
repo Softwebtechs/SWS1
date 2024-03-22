@@ -1,5 +1,5 @@
-import React from "react";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
+import React from "react";
 import atIcon from "../../../assets/icons/atIcon.png";
 import csIcon from "../../../assets/icons/csIcon.png";
 import dtIcon from "../../../assets/icons/dtIcon.png";
@@ -8,9 +8,9 @@ import expertIcon from "../../../assets/icons/expertIcon.png";
 const Content2 = () => {
   return (
     <>
-      <div className="flex flex-row h-screen text-white">
-        <div className="bg-gray-500 h-4/5 w-1/4"></div>
-        <div className="bg-black h-4/5 w-1/4">
+      <div className="sm:flex-row sm:flex flex-col h-screen text-white sm:mb-0 mb-[1150px]">
+        <div className="bg-gray-500 h-4/5 sm:w-1/4 w-full sm:flex hidden "></div>
+        <div className="bg-black h-4/5 sm:w-1/4 w-full">
           <div className="flex flex-col justify-center items-center h-3/6 gap-4">
             <h1 className="text-orange-500">
               Why We are <br /> Best i Industry
@@ -24,7 +24,7 @@ const Content2 = () => {
             <ArrowForwardIcon />
           </div>
         </div>
-        <div className="flex flex-col text-white bg-blue-900 h-4/5 w-1/4 ">
+        <div className="flex flex-col text-white bg-blue-900 h-4/5 sm:w-1/4">
           <div className="flex flex-col gap-3 h-3/6 justify-center items-center">
             <img src={atIcon} alt="Advanced Technology" />
             <h1 className="text-xl font-semibold">Advanced Technology</h1>
@@ -36,7 +36,7 @@ const Content2 = () => {
             <ArrowForwardIcon />
           </div>
         </div>
-        <div className="text-white bg-orange-500 h-4/5 w-1/4">
+        <div className="text-white sm:bg-orange-500 bg-blue-900 h-4/5 sm:w-1/4 ">
           <div className="flex flex-col gap-3 h-3/6 justify-center items-center">
             <img src={dtIcon} alt="delivery_on_time_img" />
             <h1 className="text-xl font-semibold">Delivery on time</h1>
@@ -48,7 +48,7 @@ const Content2 = () => {
             </div>
             <ArrowForwardIcon />
           </div>
-          <div className="flex flex-col gap-3 h-3/6 justify-center items-center bg-blue-900">
+          <div className="flex flex-col gap-3 h-3/6 justify-center items-center sm:bg-blue-900 bg-orange-500">
             <img src={csIcon} alt="costumer_support_icon" />
             <h1 className="text-xl font-semibold">Customer Support</h1>
             <ArrowForwardIcon />

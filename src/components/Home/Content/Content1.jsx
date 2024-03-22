@@ -1,49 +1,53 @@
 import React from "react";
 import dotIcon from "../../../assets/icons/dotIcon.png";
+import img1 from "./icons/counter-img-1.png";
+import img2 from "./icons/counter-img-2.png";
+import img3 from "./icons/counter-img-3.png";
+import img4 from "./icons/counter-img-4.png";
 
 const Content1 = () => {
   return (
     <>
-      <div className="flex h-screen bg-white justify-center  mt-10">
+      <div className="flex flex-col  items-center h-auto bg-white justify-center mt-10 sm:pb-0 pb-[500px]">
         <div className="md:flex md:flex-row flex-col gap-4">
           <div className="gap-4">
-            <div className="flex flex-row justify-between items-center ">
+            <div className="sm:flex-row flex flex-col sm:justify-between items-center">
               <h1 className="text-blue-900 font-bold text-4xl mb-9">
                 We Are Expert In <br />
                 <span className="text-orange-500">Different Solutions</span>
               </h1>
-              <img src={dotIcon} alt="dotIcon img" className="h-7 w-16  mt-6" />
+              <img src={dotIcon} alt="dotIcon img" className="h-7 w-16  " />
             </div>
 
-            <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="flex flex-col gap-4">
-                <div className="h-52 w-80 bg-gray-400 text-xl"></div>
-                <h1 className="text-blue-900 text-xl font-medium">
+            <div className="md:flex md:flex-row flex flex-col gap-4">
+              <div className="flex flex-col gap-4 sm:ml-0 ml-8 sm:mt-0 mt-5">
+                <div className="h-72 w-96 bg-gray-400 text-xl"></div>
+                <h1 className="text-blue-900 text-2xl font-semibold">
                   Material Engineering
                 </h1>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit, amet consectetur <br /> adipisicing
-                  elit. Quis quos quisquam, <br /> repellendus voluptatem
-                  cupiditate sequi <br />
-                  totam culpa.
-                </p>
+                <div className="h-auto w-80 ">
+                  <p className="text-sm font-medium leading-6 text-gray-400 ">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quis quos quisquam, culpa.
+                  </p>
+                </div>
 
                 <a href="#" className="text-orange-500  text-lg font-semibold">
                   Read more &gt;
                 </a>
               </div>
-
-              <div className="flex flex-col gap-4">
-                <div className="h-52 w-80 bg-gray-400 text-xl"></div>
-                <h1 className="text-blue-900 text-xl font-medium">
-                  Oil & Chemical
+              <div className="sm:flex flex-col gap-4 sm:ml-0 ml-8 sm:mt-0 mt-5 hidden">
+                <div className="h-72 w-96 bg-gray-400 text-xl"></div>
+                <h1 className="text-blue-900 text-2xl font-semibold">
+                  Material Engineering
                 </h1>
-                <p className="text-sm">
-                  Lorem ipsum dolor sit, amet consectetur <br /> adipisicing
-                  elit. Quis quos quisquam, <br /> repellendus voluptatem
-                  cupiditate sequi <br />
-                  totam culpa.
-                </p>
+                <div className="h-auto w-80 ">
+                  <p className="text-sm font-medium leading-6 text-gray-400 ">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quis quos quisquam, culpa.
+                  </p>
+                </div>
+
                 <a href="#" className="text-orange-500  text-lg font-semibold">
                   Read more &gt;
                 </a>
@@ -62,7 +66,7 @@ const Content1 = () => {
                   id="name"
                   name="name"
                   placeholder="Name*"
-                  className="w-full px-3 py-2 border text-black outline-none focus:border-blue-500"
+                  className="w-full px-5 py-2 border text-black outline-none focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
@@ -71,19 +75,19 @@ const Content1 = () => {
                   id="email"
                   name="email"
                   placeholder="Email*"
-                  className="w-full px-3 py-2 border outline-none focus:border-blue-500"
+                  className="w-full px-5 py-2 border outline-none focus:border-blue-500"
                 />
               </div>
               <div className="mb-4">
                 <select
                   id="service"
                   name="service"
-                  className="w-full px-3 py-2 border  outline-none focus:border-blue-500"
+                  className="w-full px-5 py-2 border  outline-none focus:border-blue-500"
                 >
                   <option value="">Service Required</option>
                   <option value="service1">Service 1</option>
                   <option value="service2">Service 2</option>
-                  <option value="service3">Service 3</option>
+                  <option value="service3">Service 5</option>
                 </select>
               </div>
               <div className="mb-4">
@@ -91,7 +95,7 @@ const Content1 = () => {
                   id="message"
                   name="message"
                   placeholder="Your Text*"
-                  className="w-full px-3 py-3 border outline-none focus:border-blue-500"
+                  className="w-full px-5 py-5 border outline-none focus:border-blue-500"
                 ></textarea>
               </div>
               <p className="mb-10">
@@ -105,6 +109,54 @@ const Content1 = () => {
                 Send Message
               </button>
             </form>
+          </div>
+        </div>
+        <div className="sm:flex sm:flex-row flex-col h-48 w-5/4 m-10 ">
+          <div className="flex items-center justify-center w-auto h-36 bg-white drop-shadow-2xl m-5 border-0">
+            <div className="flex ml-8 sm:gap-0 gap-24">
+              <div className="flex flex-col items-start justify-center gap-4">
+                <h1 className="text-5xl font-extrabold text-orange-500">14+</h1>
+                <h1 className="text-blue-900 font-medium">
+                  Years of Experience
+                </h1>
+              </div>
+              <img src={img1} className="h-32  mb-4 opacity-5 " alt="image1" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-auto h-36 bg-white drop-shadow-2xl m-5 border-0">
+            <div className="flex ml-8 sm:gap-0 gap-24">
+              <div className="flex flex-col items-start justify-center gap-4">
+                <h1 className="text-5xl font-extrabold text-orange-500">68+</h1>
+                <h1 className="text-blue-900 font-medium">Project per Year</h1>
+              </div>
+              <img src={img2} className="h-32  mb-4 opacity-5 " alt="image1" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-auto h-36 bg-white drop-shadow-2xl m-5 border-0">
+            <div className="flex ml-8 sm:gap-0 gap-24">
+              <div className="flex flex-col items-start justify-center gap-4">
+                <h1 className="text-5xl font-extrabold text-orange-500">
+                  23k+
+                </h1>
+                <h1 className="text-blue-900 font-medium">
+                  Years of Experience
+                </h1>
+              </div>
+              <img src={img3} className="h-32  mb-4 opacity-5 " alt="image1" />
+            </div>
+          </div>
+          <div className="flex items-center justify-center w-auto h-36 bg-white drop-shadow-2xl m-5 border-0">
+            <div className="flex ml-8 sm:gap-0 gap-24">
+              <div className="flex flex-col items-start justify-center gap-4">
+                <h1 className="text-5xl font-extrabold text-orange-500">
+                  100+
+                </h1>
+                <h1 className="text-blue-900 font-medium">
+                  Years of Experience
+                </h1>
+              </div>
+              <img src={img4} className="h-32  mb-4 opacity-5 " alt="image1" />
+            </div>
           </div>
         </div>
       </div>
