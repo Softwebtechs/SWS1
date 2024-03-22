@@ -1,8 +1,14 @@
-import Home from './components/Home';
+import Navbar from './components/Header/Navbar'
+import Footer from './components/Footer/Footer';
+import { Outlet } from 'react-router-dom'
 
 function App() {
   return (
-    <Home/>
+    <>
+    <Navbar/>
+    <Outlet/>
+    <Footer/>
+    </>
   );
 }
 
