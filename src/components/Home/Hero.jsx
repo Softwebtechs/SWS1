@@ -1,7 +1,6 @@
 import ArrowBackIosIcon from "@material-ui/icons/ArrowBackIos";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import React from "react";
-
 import Content1 from "./Content/Content1";
 import Content2 from "./Content/Content2";
 import Content3 from "./Content/Content3";
@@ -9,11 +8,12 @@ import Content4 from "./Content/Content4";
 import Content5 from "./Content/Content5";
 import Content6 from "./Content/Content6";
 import Content7 from "./Content/Content7";
+
 const Hero = () => {
   return (
     <>
       <div className="flex md:h-[600px] w-full h-96 items-center bg-gray-500">
-        <div className="h-12 w-12 ml-16 md:flex hidden justify-center items-center text-white bg-orange-600">
+        <div className="h-12 w-12 ml-20 md:flex hidden justify-center items-center text-white bg-orange-600 p-5">
           <ArrowBackIosIcon />
         </div>
 
@@ -27,7 +27,7 @@ const Hero = () => {
             </h1>
             <h1 className="text-white "> Providers in Worldwide!</h1>
           </div>
-          <div className="md:h-auto md:w-1/2 w-full px-8">
+          <div className="md:h-auto xl:w-1/2 w-full px-8">
             <p className="md:text-base text-sm font-normal text-center sm:flex hidden">
               Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
               arcu. In enim justo, ehoncus ut, imperdiet a, venenatis vitae,
@@ -43,7 +43,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className="h-12 w-12 md:flex hidden justify-center items-center text-white bg-blue-900">
+        <div className="h-12 w-12 md:flex hidden justify-center items-center text-white bg-blue-900 mr-20 p-5">
           <ArrowForwardIosIcon />
         </div>
       </div>
