@@ -10,6 +10,7 @@ import Projects from './components/Projects/Projects.jsx'
 import Blog from './components/Blog/Blog.jsx'
 import Pages from './components/Pages/Pages.jsx'
 import Contact from './components/Contact/Contact.jsx'
+import History from './components/History/History.jsx'
 
 
 const router = createBrowserRouter(
@@ -21,6 +22,8 @@ const router = createBrowserRouter(
     <Route path='projects' element = {<Projects />}/>
     <Route path='blog' element = {<Blog />}/>
     <Route path='pages' element = {<Pages />}/>
+    
+      <Route path='history' element = {<History />} />
     <Route path='contact' element = {<Contact />}/>
    </Route>
   )

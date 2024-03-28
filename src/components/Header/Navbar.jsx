@@ -221,16 +221,7 @@ const Navbar = () => {
             </div>
           </nav>
         </header>
-        <div className='md:h-36 h-56 bg-blue-950  md:flex-row  md:justify-between px-48 md:px-10 xl:px-28 items-center flex flex-col gap-6 justify-center'>
-             <h1 className='text-white font-semibold md:text-4xl xl:text-6xl text-6xl'>Career</h1>
-            <div className='text-white md:flex-row flex-col'>
-              <div className="flex flex-row gap-5 ">
-                <h1 className='text-lg text-gray-300'>HOME</h1>
-                <p>|</p>
-                <h1 className='text-lg text-gray-300'> CAREER</h1>
-              </div>
-            </div>
-        </div>
+       
       </div>
 
     </>

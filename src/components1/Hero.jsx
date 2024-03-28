@@ -15,6 +15,16 @@ import SendIcon from "@material-ui/icons/Send";
 const Hero = () => {
   return (
     <>
+     <div className='md:h-36 h-56 bg-blue-950  md:flex-row  md:justify-between px-48 md:px-10 xl:px-28 items-center flex flex-col gap-6 justify-center'>
+             <h1 className='text-white font-semibold md:text-4xl xl:text-6xl text-6xl'>Career</h1>
+            <div className='text-white md:flex-row flex-col'>
+              <div className="flex flex-row gap-5 ">
+                <h1 className='text-lg text-gray-300'>HOME</h1>
+                <p>|</p>
+                <h1 className='text-lg text-gray-300'> CAREER</h1>
+              </div>
+            </div>
+        </div>
       <div className="h-[1800px] xl:h-[1000px]   flex items-center flex-col gap-10 justify-center mt-96 m-10  md:mt-0">
         <div className=" flex items-center flex-col md:pt-44 pt-48 mt-20 md:mt-0">
           <h1 className="text-blue-900 md:text-6xl text-4xl font-bold mb-2">
