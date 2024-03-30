@@ -9,18 +9,18 @@ const Part3 = ()=>{
       
   return (
       <>
-      <div className='flex md:flex-row flex-col  font-poppins items-center mt-10 '>
-                    <div className='md:h-96 md:w-1/2 h-96 w-full bg-gray-200 flex flex-col items-left'>
-                        <h1 class ="font-bold text-4xl mt-20 ml-10 tracking-wider">Automotive <br/>Spares</h1>
+      <div className='flex xl:flex-row flex-col  font-poppins items-center mt-28 '>
+                    <div className='xl:h-96 xl:w-1/2 h-96 w-full bg-gray-200 flex flex-col items-left'>
+                        <h1 class ="font-bold text-4xl mt-20 ml-10 tracking-wider w-64 md:max-xl:w-full">Automotive Spares</h1>
                         <p class =" text-xs text-orange-500 ml-10 mt-10 font-roboto tracking-wider">Consumer Choice Award Winner For Best <br/> Industrial Production</p>
-                        <button class =" bg-blue-900 text-white mt-10 h-10 w-24 ml-10 text-xs font-roboto">Read More</button>
+                        <button class =" bg-blue-900 text-white mt-10 h-10 w-24 ml-10 text-xs font-poppins hover:bg-white hover:text-black cursor-pointer">Read More</button>
                     </div>
                     
 
-                    <div style={{ backgroundColor: '#273272' }} className='md:h-96 md:w-1/2 h-96 w-full  font-poppins flex flex-col  items-left ' >
-                        <h1 class ="font-bold text-4xl mt-20 ml-10 text-white tracking-wider">Infrastructure <br/>Materials</h1>
+                    <div style={{ backgroundColor: '#273272' }} className='xl:h-96 xl:w-1/2 h-96 w-full  font-poppins flex flex-col  items-left ' >
+                        <h1 class ="font-bold text-4xl mt-20 ml-10 text-white tracking-wider w-64 md:max-xl:w-full">Infrastructure Materials</h1>
                         <p class =" text-xs text-white ml-10 mt-10  tracking-wider font-roboto">Consumer Choice Award Winner For Best <br/> Industrial Production</p>
-                        <button class =" bg-orange-600 text-white mt-10 h-10 w-24 ml-10 text-xs font-roboto">Read More</button>
+                        <button class =" bg-orange-600 text-white mt-10 h-10 w-24 ml-10 text-xs font-poppins hover:bg-white hover:text-black cursor-pointer">Read More</button>
                     </div>
 
                     
@@ -28,19 +28,19 @@ const Part3 = ()=>{
          </div>   
         
 
-         <div className='flex md:flex-row flex-col mb-10  ' >
-         <div className='md:h-96 md:w-1/2 h-96 w-full  flex flex-row  items-centre'>
-                        <div style={{ backgroundColor: '#273272' }} class=" md:w-1/2 md:h-96 h-96 w-1/2 ">
-                        <div class ="  smallcontainer h-10 w-32 flex justify-center items-right bg-white font-poppins text-orange-500 text-right mt-40 ml-64 font-bold text-2xl">Power</div>
-                        </div>
-                        <div class="bg-orange-600 md:w-1/2 md:h-96 h-96 w-1/2 ">
-                        <div class ="  smallcontainer h-10 w-24 flex justify-center items-left bg-white font-poppins text-blue-900 text-left mt-40  font-bold text-2xl">Energy</div>
-                        </div>
-                        
-                    </div>
+         <div className='flex xl:flex-row flex-col mb-10  ' >
+         <div className="xl:h-96 xl:w-1/2 h-96 w-full flex bg-gray-200">
+          <div style={{ backgroundColor: '#273272' }} className="xl:w-1/2 xl:h-96 h-full w-1/2"></div>
+          <div className="relative bg-orange-500 xl:w-1/2 xl:h-96 h-full w-1/2 flex items-center">
+            <div className="h-14 w-64 bg-white absolute -left-32  ">
+                <h1 className="text-center text-orange-500 font-roboto text-3xl mt-3">Power <span className='text-blue-900'> Energy</span></h1>
+            </div>
+          </div>
+        </div>
+        
                     
 
-                    <div className='md:h-96 md:w-1/2 h-96 w-full bg-gray-200  flex flex-col font-poppins items-left ' >
+                    <div className='xl:h-96 xl:w-1/2 h-96 w-full bg-gray-200  flex flex-col font-poppins items-left ' >
                         <p class ="font-bold text-s mt-10 ml-10 text-blue-900">More Services</p>
                         <h1 class =" text-4xl text-orange-500 ml-10 mt-1 font-bold">Quality Resorcing</h1>
                         <p class ="text-gray-600 text-left ml-10 mt-5 text-xs font-roboto ">Quality resourcing in the industry plays a pivotal role in ensuring the efficiency, effectiveness, and sustainability of business operations. It involves the strategic allocation and utilization of human, technological, and financial resources to achieve optimal outcomes.</p>

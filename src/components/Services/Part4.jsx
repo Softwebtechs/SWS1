@@ -13,7 +13,7 @@ const Part4 =()=>{
                 </div>
         </div>
 
-        <div className=" flex justify-center item-center gap-10 md:w-3/4 md:h-1/2 h-96 w-96  md:ml-60 sm:ml-32 mr:14  mt-10">
+        <div className=" flex justify-center item-center gap-10 xl:w-3/4 xl:h-1/2 h-1/2 w-3/4  xl:ml-60 sm:ml-32 ml-14  mt-10">
            <img src={logo} alt="logo" className="sm:w-3/4 sm:h-3/4 w-96 h-96 ml-9 flex  " />
            {/*<img src={logo2} alt="logo-2"  className=" w-full h-full mr-7  " />
            <img src={logo3} alt="logo-3"  className=" w-full h-full mr-7  " />*/}

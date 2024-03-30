@@ -1,6 +1,8 @@
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Patrai from '../../image/patrai logo.png'
+import { Link, NavLink } from "react-router-dom";
+
 const Footer = () => {
     const arrow =(
         <svg class="h-4 w-4 text-zinc-400"  width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="5" y1="12" x2="19" y2="12" />  <line x1="15" y1="16" x2="19" y2="12" />  <line x1="15" y1="8" x2="19" y2="12" /></svg>
@@ -38,22 +40,24 @@ const Footer = () => {
     
         
 
-        <div className=" flex md:flex-row flex-col justify-center items-center bg-black font-roboto md:h-96 h-full w-full mt-24 ">
-        <div className="  h-96 md:w-72 w-96 bg-gray-200 ml-4 md:mb-24  mb-10 drop-shadow-md flex flex-col gap-5">
+        <div className=" xl:flex xl:flex-row flex flex-col  justify-center items-center bg-black font-roboto xl:h-96 h-full w-full xl:mt-32  mt-24 relative ">
+        <div className="  h-96 xl:w-72 w-5/6 bg-gray-200 xl:mr-[1000px] xl:mb-24  mb-10 drop-shadow-md flex flex-col gap-5 absolute -top-10">
             <div className="bg-orange-600 w-full h-14 ">
-            <div  className="flex item-centre space-x-2 mt-4 ml-8">
-                <span class= "text-white text-xs font-poppins">Follow Us :</span>
+            <div  className="flex item-centre  space-x-2 mt-4 xl:ml-8 md:ml-96 ml-14">
+                <span class= "text-white text-xs font-poppins  ">Follow Us :</span>
                 <TwitterIcon
                 style={{
                   color: "white",
                   marginBottom: " 3px",
                   marginRight: "4px",
                   width:"17px",
-                  height:"17px"
+                  height:"17px",
+                  
                 }}
                 fontSize="small"
+                className="hover:bg-blue-950 cursor-pointer"
               />
-            <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-white hover:bg-blue-950 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
               <path fill-rule="evenodd" d="M13.1 6H15V3h-1.9A4.1 4.1 0 0 0 9 7.1V9H7v3h2v10h3V12h2l.6-3H12V6.6a.6.6 0 0 1 .6-.6h.5Z" clip-rule="evenodd" />
             </svg>
             <InstagramIcon
@@ -65,126 +69,188 @@ const Footer = () => {
                   height:"17px"
                 }}
                 fontSize="small"
+                className="hover:bg-blue-950 cursor-pointer"
               />
-            <svg class="w-4 h-4 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
+            <svg class="w-4 h-4 text-white dark:text-white hover:bg-blue-950 cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M12.5 8.8v1.7a3.7 3.7 0 0 1 3.3-1.7c3.5 0 4.2 2.2 4.2 5v5.7h-3.2v-5c0-1.3-.2-2.8-2.1-2.8-1.9 0-2.2 1.3-2.2 2.6v5.2H9.3V8.8h3.2ZM7.2 6.1a1.6 1.6 0 0 1-2 1.6 1.6 1.6 0 0 1-1-2.2A1.6 1.6 0 0 1 6.6 5c.3.3.5.7.5 1.1Z" clip-rule="evenodd"/>
             <path d="M7.2 8.8H4v10.7h3.2V8.8Z"/>
              </svg>  
-             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M18 6c2.07 2.04 2.85 4.89 2.36 7.55c.41.72.64 1.56.64 2.45a5 5 0 0 1-5 5c-.89 0-1.73-.23-2.45-.64c-2.66.49-5.51-.29-7.55-2.36c-2.07-2.04-2.85-4.89-2.36-7.55C3.23 9.73 3 8.89 3 8a5 5 0 0 1 5-5c.89 0 1.73.23 2.45.64c2.66-.49 5.51.29 7.55 2.36m-5.96 11.16c2.87 0 4.3-1.38 4.3-3.24c0-1.19-.56-2.46-2.73-2.95l-1.99-.44c-.76-.17-1.62-.4-1.62-1.11c0-.72.6-1.22 1.7-1.22c2.23 0 2.02 1.53 3.13 1.53c.58 0 1.08-.34 1.08-.93c0-1.37-2.19-2.4-4.05-2.4c-2.01 0-4.16.86-4.16 3.14c0 1.1.39 2.27 2.55 2.81l2.69.68c.81.2 1.01.65 1.01 1.07c0 .68-.68 1.35-1.91 1.35c-2.41 0-2.08-1.85-3.37-1.85c-.58 0-1 .4-1 .97c0 1.11 1.33 2.59 4.37 2.59"/></svg>
+             <svg className="hover:bg-blue-950 cursor-pointer" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M18 6c2.07 2.04 2.85 4.89 2.36 7.55c.41.72.64 1.56.64 2.45a5 5 0 0 1-5 5c-.89 0-1.73-.23-2.45-.64c-2.66.49-5.51-.29-7.55-2.36c-2.07-2.04-2.85-4.89-2.36-7.55C3.23 9.73 3 8.89 3 8a5 5 0 0 1 5-5c.89 0 1.73.23 2.45.64c2.66-.49 5.51.29 7.55 2.36m-5.96 11.16c2.87 0 4.3-1.38 4.3-3.24c0-1.19-.56-2.46-2.73-2.95l-1.99-.44c-.76-.17-1.62-.4-1.62-1.11c0-.72.6-1.22 1.7-1.22c2.23 0 2.02 1.53 3.13 1.53c.58 0 1.08-.34 1.08-.93c0-1.37-2.19-2.4-4.05-2.4c-2.01 0-4.16.86-4.16 3.14c0 1.1.39 2.27 2.55 2.81l2.69.68c.81.2 1.01.65 1.01 1.07c0 .68-.68 1.35-1.91 1.35c-2.41 0-2.08-1.85-3.37-1.85c-.58 0-1 .4-1 .97c0 1.11 1.33 2.59 4.37 2.59"/></svg>
             </div>
             </div>
 
-            <div  className="flex item-centre space-x-2 mt-2 ml-5">
-            <img src={Patrai} alt="patrai"  className=" w-17 h-7   " />
+            <div  className="flex item-centre space-x-2 mt-2 ml-5 ">
+            <Link to="/" className="flex items-center">
+            <img src={Patrai} alt="patrai"  className=" xl:w-17 xl:h-7 w-32 h-10   " />
+            </Link>
           </div>
-          <p className= "text-gray-600 text-xs text-left ml-5 text-xs">Nam quam nunc,blandit vel,luctus <br/> pulvinar id,Iorem.Etiam ultri<br/> cies nisi vel augue</p>
+          <p className= " text-gray-600 text-xs text-left ml-5 text-xs w-64 md:max-xl:w-full ">Nam quam nunc,blandit vel,luctus  pulvinar,  id Iorem.Etiam ultri cies nisi vel augue</p>
           <div className ="flex item-centre space-x-2 ml-5 " >
                     {address} 
-                    <span class ="text-blue-900  text-xs text-left">Manufactory,2nd Cross Street,< br/>Newyork,USA 10205</span>
+                    <span class ="text-blue-950  text-xs text-left w-56 md:max-xl:w-full ">Manufactory,2nd Cross Street,Newyork,USA 10205</span>
                 </div>
                 <div className ="flex item-centre space-x-2 ml-5" >
-                    {phone} 
-                    <span class ="text-blue-900  text-xs text-center">+00-123-456-7890 <br/>+00-123-456-7891</span>
+                    {phone}
+                    <div> 
+                    <p class ="text-blue-950  text-xs text-center cursor-pointer hover:text-orange-500 hover:underline ">+00-123-456-7890</p>
+                    <p class="text-blue-950  text-xs text-center cursor-pointer hover:text-orange-500 hover:underline mt-2">
+                    +00-123-456-7891 </p>
+                    </div>
+                    
                 </div>
+                
                 <div className ="flex item-centre space-x-2 ml-5" >
                     {mail} 
-                    <span class ="text-blue-900 font- text-xs text-center">admin@domain.com <br/> support@domain.com</span>
+                    <div>
+                    <p class ="text-blue-950 font-roboto text-xs text-center cursor-pointer hover:text-orange-500 hover:underline">admin@domain.com </p>
+                    <p class= "text-blue-950 font-roboto text-xs text-center cursor-pointer hover:text-orange-500 hover:underline mt-2"> support@domain.com</p>
+                    </div>
                 </div>
           </div>
           
             
-            
-            <div className=" flex flex-col justify-center items-top text-gray-200  text-l ml-24 mb-15    ">
+            <div class=" md:flex md:flex-row flex-col  ">
+            <div className=" flex flex-col justify-left items-top text-gray-200  text-l xl:ml-80 xl:mt-10 mt-96  ml-28  ">
                 <h1 class= "font-poppins">Best Services</h1>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Material Equipments</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Material Equipments</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class =" text-zinc-400 text-xs text-center">Agriculture processing</span>
+                    <span class =" text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Agriculture processing</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Mechanical Engineering</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Mechanical Engineering</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400 text-xs text-center">Chemical Research</span>
+                    <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Chemical Research</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Material Engineering</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Material Engineering</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Agriculture Processing</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Agriculture Processing</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Power & Energy</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Power & Energy</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Material Equipments</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Material Equipments</span>
                 </div>
                     <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                <span class ="text-zinc-400  text-xs text-center">Material Equipments</span>
+                <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Material Equipments</span>
                     </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                   <span class ="text-zinc-400 text-xs text-center">Material Equipments</span>
+                   <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Material Equipments</span>
                 </div>
 
             </div>
 
-            <div className=" flex flex-col justify-center items-top text-gray-200  text-l ml-24 mb-15 ">
-                <h1 class= "font-poppins md:mt-0 mt-4">Quick Links</h1>
+            <div className=" flex flex-col justify-top items-top text-gray-200  text-l ml-32  md:max-xl:mt-96   mb-14 mt-10 ">
+                <h1 class= "font-poppins md:mt-0 mt-4 ">Quick Links</h1>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Home</span>
+                    <span class ="text-zinc-400  text-xs text-center ">
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-white cursor-pointer lg:border-0  lg:p-0`
+                      }
+                    >Home
+                    </NavLink>
+                    </span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Features</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">Features</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">About us</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">
+                    <NavLink
+                      to="/about"
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-white cursor-pointer lg:border-0  lg:p-0`
+                      }
+                    >About us
+                    </NavLink>
+                    </span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400  text-xs text-center">Services</span>
+                    <span class ="text-zinc-400  text-xs text-center hover:text-white cursor-pointer">
+                    <NavLink
+                      to="/services"
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-white cursor-pointer lg:border-0  lg:p-0`
+                      }
+                      >Services
+                    </NavLink>
+                      </span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400 text-xs text-center">Projects</span>
+                    <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">
+                    <NavLink
+                      to="/projects"
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-white cursor-pointer lg:border-0  lg:p-0`
+                      }
+                    >Projects
+                    </NavLink>
+                    </span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400 text-xs text-center">News</span>
+                    <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">News</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400 text-xs text-center">Shop</span>
+                    <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Shop</span>
                 </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                    <span class ="text-zinc-400 text-xs text-center">Career</span>
+                    <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Career</span>
                 </div>
                     <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                <span class ="text-zinc-400 text-xs text-center">Faq</span>
+                <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">Faq</span>
                     </div>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {arrow} 
-                   <span class ="text-zinc-400 text-xs text-center">Contact us</span>
+                   <span class ="text-zinc-400 text-xs text-center hover:text-white cursor-pointer">
+                   <NavLink
+                      to="/contact"
+                      className={({ isActive }) =>
+                        `block py-2 pr-4 pl-3 duration-200 ${
+                          isActive ? "text-white" : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent hover:text-white cursor-pointer lg:border-0  lg:p-0`
+                      }
+                    >Contact us
+                    </NavLink>
+                    </span>
                 </div>
 
             </div>
 
-            <div className=" flex flex-col justify-center items-top text-gray-200  text-l ml-24 mb-24 ">
+            <div className=" flex flex-col justify-center items-left text-gray-200  text-l ml-24  md:max-xl:mt-96   mb-5">
                 <h1 class= "font-poppins">Latest Tweets</h1>
                 <div className ="flex item-centre space-x-2 mt-3" >
                     {twitter} 
@@ -200,10 +266,11 @@ const Footer = () => {
                 </div>
             </div>
         </div>
+        </div>
         
         
-        <div className=" flex justify-center items-center bg-blue-950 w-full h-12 ">
-          <p className=" text-white text-xs text-center font-roboto">@2024. All Rights Reserved By Design Themes</p>
+        <div style={{ backgroundColor: '#273272' }} className=" flex justify-center items-center  w-full h-12 ">
+          <p className=" text-white text-xs text-center font-roboto">@2024. All Rights Reserved By <span class="hover:text-red-500 cursor-pointer">Design Themes </span></p>
         </div>
             
         </>
