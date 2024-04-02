@@ -17,6 +17,7 @@ import Pages from "./components/Pages/Pages.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import History from "./components/History/History.jsx";
 import Team from "./components/Team/Team.jsx";
+import Quote from "./components/Quote/Quote.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -31,6 +32,7 @@ const router = createBrowserRouter(
       <Route path="history" element={<History />} />
       <Route path="contact" element={<Contact />} />
       <Route path="team" element={<Team />} />
+      <Route path="quote" element={<Quote />} />
     </Route>
   )
 );
