@@ -18,6 +18,8 @@ import Contact from "./components/Contact/Contact.jsx";
 import History from "./components/History/History.jsx";
 import Team from "./components/Team/Team.jsx";
 import Quote from "./components/Quote/Quote.jsx";
+import Faq from "./components/Faq/Faq.jsx";
+import Shop from "./components/Shop/Shop.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -33,6 +35,8 @@ const router = createBrowserRouter(
       <Route path="contact" element={<Contact />} />
       <Route path="team" element={<Team />} />
       <Route path="quote" element={<Quote />} />
+      <Route path="faq" element={<Faq />} />
+      <Route path="shop" element={<Shop />} />
     </Route>
   )
 );
