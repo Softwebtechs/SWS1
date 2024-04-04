@@ -1,4 +1,11 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+const images = [
+    'https://patrai.wpengine.com/wp-content/uploads/2019/03/sidebar-filler-img-1.jpg',
+    'https://patrai.wpengine.com/wp-content/uploads/2019/03/sidebar-filler-img-2.jpg',
+    'https://patrai.wpengine.com/wp-content/uploads/2019/04/sidebar-filler-img-3.jpg',
+    'https://patrai.wpengine.com/wp-content/uploads/2019/04/sidebar-filler-img-4.jpg',
+]
 
 const Construction = () => {
 
@@ -6,11 +13,31 @@ const Construction = () => {
         <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100"><path fill="orange" d="m92.038 24.333l-8.62-8.622a1.615 1.615 0 0 0-2.282 0L49.987 46.86l-6.07-6.068a1.614 1.614 0 0 0-2.282 0l-8.622 8.622a1.611 1.611 0 0 0 0 2.282l15.782 15.778c.302.302.712.473 1.141.473c.019 0 .037-.01.056-.01c.016 0 .033.009.05.009a1.61 1.61 0 0 0 1.141-.473l40.855-40.857c.63-.632.63-1.653 0-2.283" /><path fill="orange" d="M72.022 53.625v21.159H27.978V30.74h31.06l9.979-9.978H23.193v.007c-.023 0-.044-.007-.068-.007a5.118 5.118 0 0 0-5.113 5H18v54h.013A5.111 5.111 0 0 0 23 84.749v.013h54v-.013a5.11 5.11 0 0 0 4.987-4.987H82V43.647z" /></svg>
 
     );
+    const [activeDiv, setActiveDiv] = useState(1);
+    const [activeIcon, setActiveIcon] = useState(1);
+
+    const toggleVisibility = (index) => {
+        setActiveDiv(prevActiveDiv => (prevActiveDiv === index ? null : index));
+        setActiveIcon(index);
+    };
+
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+
+    const goToPreviousSlide = () => {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        setCurrentIndex(newIndex);
+    };
+
+    const goToNextSlide = () => {
+        const newIndex = (currentIndex + 1) % images.length;
+        setCurrentIndex(newIndex);
+    };
     return (
 
 
         <>
-            <div style={{ backgroundColor: '#273272' }} className=" font-poppins  md:h-36 h-56   md:flex-row  md:justify-between px-7 items-center flex flex-col gap-6 justify-center">
+            <div style={{ backgroundColor: '#273272' }} className=" font-poppins  md:h-36 h-56   md:flex-row  md:justify-between md:px-48 px-7 items-center flex flex-col gap-6 justify-center">
 
                 <h1 className="text-white font-semibold font-roboto md:ml-2 md:text-5xl text-4xl tracking-wider">Construction Tools</h1>
                 <div className='text-white md:flex-row flex-col'>
@@ -244,75 +271,120 @@ const Construction = () => {
                         <div className=" md:flex md:flex-row  ">
                             <div class="bg-white md:w-full w-full h-12">
                                 <div className="flex  space-x-2 mt-6" >
-                                    <span class="text-orange-600 text-s font-bold text-left font-poppins lg:max-xl:w-96 ">Industrial profit grow faster in eight months</span>
+                                    <span class={` text-orange-600 text-s font-bold text-left font-poppins lg:max-xl:w-96 ${activeIcon === 3 ? ' text-orange-600' : 'text-blue-950'}`}>Industrial profit grow faster in eight months</span>
+
 
                                     <div className="flex items-centre  ">
+                                        <button className="focus:outline-none" onClick={() => toggleVisibility(1)}>
+                                            {activeDiv === 1 ? (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-orange-600  lg:ml-[500px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-orange-600 lg:ml-[500px] lg:max-xl:ml-32 ml-2">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
-                                        </svg>
+                                            ) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-950 lg:ml-[500px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                                </svg>
+                                            )}
+                                        </button>
                                     </div>
+
 
                                 </div>
 
                             </div>
+
                         </div>
+                        <div class="border  bg-gray-50 mt-6 w-full lg:max-xl:w-96 "></div>
+                        {activeDiv === 1 && (
+                            <div  >
 
-
-
-                        <p class="text-gray-500 text-s text-left mt-6 font-roboto xl:w-full w-96 lg:max-xl:w-[600px]">Profit is a key metric for assessing the performance and viability of industrial businesses. It indicates the efficiency of operations, ability  generate revenue, and overall financial health.Higher industrial profits generally signify successful management, effective production processes, and strong demand for products or services. </p>
+                                <p class="text-gray-500 text-s text-left mt-6 font-roboto xl:w-full w-96 lg:max-xl:w-[600px]">Profit is a key metric for assessing the performance and viability of industrial businesses. It indicates the efficiency of operations, ability  generate revenue, and overall financial health.Higher industrial profits generally signify successful management, effective production processes, and strong demand for products or services. </p>
+                            </div>
+                        )}
                     </div>
-                    <div class=" flex flex-col items-top lg:ml-32 ml-10 mt-5">
+                    <div class=" flex flex-col items-top lg:ml-32 ml-10 mt-5 mr-20">
                         <div className=" flex flex-row">
                             <div class="bg-white lg:w-full w-[400px] h-12">
                                 <div className="flex item-centre space-x-2 " >
-                                    <span class="text-blue-950 text-s font-bold text-left font-poppins lg:max-xl:w-[600px]">We work to reduce air emissions associated with our operations</span>
+                                    <span class={` text-blue-950 text-s font-bold text-left font-poppins lg:max-xl:w-[600px] ${activeIcon === 2 ? ' text-orange-600' : 'text-blue-950'}`}>We work to reduce air emissions associated with our operations</span>
 
                                     <div className="flex items-centre space-x-2 ">
+                                        <button className="focus:outline-none" onClick={() => toggleVisibility(2)}>
+                                            {activeDiv === 2 ? (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-orange-600  lg:ml-[338px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-950 lg:ml-[340px] lg:max-xl:ml-0 ml-2 mr-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                        </svg>
+                                            ) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-950 lg:ml-[338px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                                </svg>
+                                            )}
+
+                                        </button>
 
                                     </div>
                                 </div>
 
                             </div>
                         </div>
+                        <div class="border  bg-gray-50 mt-6 xl:mt-0 w-full lg:max-xl:w-96 "></div>
+                        {activeDiv === 2 && (
+                            <div  >
+
+                                <p class="text-gray-500 text-s text-left mt-2 font-roboto xl:w-full w-96 lg:max-xl:w-[600px] mb-4">Profit is a key metric for assessing the performance and viability of industrial businesses. It indicates the efficiency of operations, ability  generate revenue, and overall financial health.Higher industrial profits generally signify successful management, effective production processes, and strong demand for products or services. </p>
+                            </div>
+                        )}
                         <div className=" flex flex-row ">
                             <div class="bg-white lg:w-full w-[400px] h-12 ">
-                                <div className="flex item-centre   lg:mt-0 mt-5" >
-                                    <span class="text-blue-950 text-s font-bold text-left font-poppins lg:max-xl:w-[600px]">A brilliant record in responding to complex customer requirements</span>
+                                <div className="flex item-centre   lg:mt-4 mt-7" >
+                                    <span className={`text-s font-bold text-left font-poppins lg:max-xl:w-[600px] ${activeIcon === 3 ? ' text-orange-600' : 'text-blue-950'}`}>A brilliant record in responding to complex customer requirements</span>
 
                                     <div className="flex items-centre  ">
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-950 lg:ml-[330px]  lg:max-xl:ml-2 ml-4 mr-4">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-                                        </svg>
+                                        <button className="focus:outline-none" onClick={() => toggleVisibility(3)}>
+                                            {activeDiv === 3 ? (<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-orange-600  lg:ml-[328px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                            </svg>
+
+                                            ) : (
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-blue-950 lg:ml-[328px] lg:max-xl:ml-0 ml-2 mr-4">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                                                </svg>
+                                            )}
+                                        </button>
 
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-                        <div className='md:flex md:flex-row flex flex-col gap-7  items-center mt-10 lg:ml-10   '>
-                            <div className='md:max-lg:h-40 md:max-lg:w-44  lg:max-xl:h-44  lg:max-xl:w-64    h-56 w-96 bg-gray-500 flex flex-col items-left relative'>
-                                <div className=" md:max-lg:h-[120px] md:max-lg:w-[160px] lg:max-xl:h-[140px]  lg:max-xl:w-[240px] h-44 w-[360px] bg-blue-950 mt-5 lg:max-xl:ml-2 md:max-lg:ml-2 ml-2 hover:bg-blue-950 hover:opacity-60 transition duration-300 opacity-0  flex flex-col justify-center items-center  "></div>
-                                <div class=" bg-blue-950  hover:bg-orange-600 cursor-pointer w-8 h-10 lg:mt-20 md:max-lg:mt-14 mt-24 absolute -left-4 flex justify-center items-center drop-shadow-md  "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white  ">
+                        <div class="border  bg-gray-50 mt-12 xl:mt-4 w-full lg:max-xl:w-96 "></div>
+                        {activeDiv === 3 && (
+                            <div>
+
+                                <p class="text-gray-500 text-s text-left mt-2 font-roboto xl:w-full w-96 lg:max-xl:w-[600px] ">Profit is a key metric for assessing the performance and viability of industrial businesses. It indicates the efficiency of operations, ability  generate revenue, and overall financial health.Higher industrial profits generally signify successful management, effective production processes, and strong demand for products or services. </p>
+                            </div>
+                        )}
+                        <div className='md:flex md:flex-row flex flex-col gap-7  items-center xl:mt-10 mt-12 lg:ml-10 cursor-move relative ' >
+                            <div className='slide-container md:max-lg:h-40 md:max-lg:w-44  lg:max-xl:h-56  lg:max-xl:w-64    h-72 w-96 bg-gray-500 flex flex-col items-left relative cursor-move' >
+                                <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} className="w-96 h-72 cursor-move" />
+                                <div className="absolute inset-0 md:max-lg:h-[141px] md:max-lg:w-[160px] lg:max-xl:h-[205px]  lg:max-xl:w-[240px] h-[270px] w-[365px] bg-blue-950 mt-2 lg:max-xl:ml-2 md:max-lg:ml-2 ml-2 hover:bg-blue-950 hover:opacity-60 transition duration-300 opacity-0  flex flex-col justify-center items-center cursor-move  " ></div>
+                                <div class=" bg-blue-950  hover:bg-orange-600 cursor-pointer w-12 h-14 lg:mt-32 md:max-lg:mt-14 lg:max-xl:mt-20 mt-24 absolute -left-4 flex justify-center items-center drop-shadow-md  " onClick={goToPreviousSlide}><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 text-white  ">
                                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                                 </svg>
                                 </div>
-                                <div class=" bg-blue-950 md:hidden hover:bg-orange-600 text-white cursor-pointer w-8 h-10 lg:mt-14 mt-24 flex  justify-center items-center drop-shadow-md md:max-lg:mt-8 md:max-lg:ml-[145px] absolute -right-4 lg:max-xl:ml-[225px]">
+                                <div class=" bg-blue-950 md:hidden hover:bg-orange-600 text-white cursor-pointer w-12 h-14 lg:mt-14 mt-24 flex  justify-center items-center drop-shadow-md md:max-lg:mt-8 md:max-lg:ml-[145px] absolute -right-4 lg:max-xl:ml-[225px]" onClick={goToNextSlide}>
                                     <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
                                     </svg>
                                 </div>
                             </div>
 
-                            <div className=' group md:max-lg:h-40 md:max-lg:w-44 lg:max-xl:h-44  lg:max-xl:w-64  h-56 w-96 bg-gray-500 md:flex hidden  flex-col justify-center items-center  items-right relative' >
-                                <div className=" md:max-lg:h-[125px] md:max-lg:w-[158px] lg:max-xl:h-32  lg:max-xl:w-56 h-44 w-[350px]   bg-blue-950 mt-2 ml-2 hover:bg-blue-950 hover:opacity-60 transition duration-300 opacity-0  flex flex-col  "></div>
+                            <div className='cursor-move slide-container md:max-lg:h-40 md:max-lg:w-44 lg:max-xl:h-56  lg:max-xl:w-64  h-72 w-96 bg-gray-500 md:flex hidden  flex-col justify-center items-center  items-right relative' >
+                                <img src={images[(currentIndex + 1) % images.length]} alt={`Slide ${(currentIndex + 1) % images.length}`} className="w-96 h-72 cursor-move" />
+                                <div className="absolute inset-0 md:max-lg:h-[141px] md:max-lg:w-[158px] lg:max-xl:h-[205px]  lg:max-xl:w-[240px] h-[270px] w-[365px]   bg-blue-950 mt-2 ml-2 hover:bg-blue-950 hover:opacity-60 transition duration-300 opacity-0  flex flex-col cursor-move  " ></div>
 
-                                <div class=" bg-blue-950 hover:bg-orange-600 text-white cursor-pointer w-8 h-10 lg:mt-7 mt-24 flex  justify-center items-center drop-shadow-md md:max-lg:mt-1 md:max-lg:ml-[145px] absolute -right-4 lg:max-xl:ml-[225px]">
+                                <div class=" bg-blue-950 hover:bg-orange-600 text-white cursor-pointer w-12 h-14 lg:mt-7 mt-24 flex  justify-center items-center drop-shadow-md md:max-lg:mt-1 md:max-lg:ml-[145px] absolute -right-4 lg:max-xl:ml-[225px]" onClick={goToNextSlide}>
                                     <svg class="w-5 h-5 text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m9 5 7 7-7 7" />
                                     </svg>

@@ -11,6 +11,8 @@ import Patrai from '../../image/patrai logo.png'
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
+import ServiceDropdown from './ServiceDropdown';
+
 
 const Navbar = () => {
 
@@ -32,7 +34,7 @@ const Navbar = () => {
             <p>
               <PhoneIcon
                 style={{
-                  height: "15px",
+                  height: "20px",
                   color: "gray",
                   marginBottom: " 5px",
                 }}
@@ -101,7 +103,10 @@ const Navbar = () => {
                   color: "gray",
                   marginBottom: " 4px",
                   marginRight: "4px",
+                  onMouseOver: "this.style.backgroundColor='#0F0'",
+                  onMouseOut: "this.style.backgroundColor='#00F'",
                 }}
+
               />
               <svg class=" w-5 h-5 text-gray-500 hover:text-white cursor-pointer " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24">
                 <path fill-rule="evenodd" d="M12 22a10 10 0 0 1-7.1-3A9.9 9.9 0 0 1 5 4.8C7 3 9.5 2 12.2 2h.2c2.4 0 4.8 1 6.6 2.6l-2.5 2.3a6.2 6.2 0 0 0-4.2-1.6c-1.8 0-3.5.7-4.8 2a6.6 6.6 0 0 0-.1 9.3c1.2 1.3 2.9 2 4.7 2h.1a6 6 0 0 0 4-1.1c1-.9 1.8-2 2.1-3.4v-.2h-6v-3.4h9.6l.1 1.9c-.1 5.7-4 9.6-9.7 9.6H12Z" clip-rule="evenodd" />
@@ -161,80 +166,10 @@ const Navbar = () => {
                 </NavLink>
 
                 {isDropdownVisible && (
-
-                  <div className="absolute mt-1  w-56    shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition duration-700 ">
-                    <div className="py-1 flex flex-col gap-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                      <NavLink
-                        to="/electronic"
-                        className="w-full border-b-2 border-gray-200  block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Electronic Materials
-                      </NavLink>
-                      <NavLink
-                        to="/bm"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Building Management
-                      </NavLink>
-                      <NavLink
-                        to="/ps"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Power Systems
-                      </NavLink>
-                      <NavLink
-                        to="/it"
-                        className=" w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Industry Tools
-                      </NavLink>
-                      <NavLink
-                        to="/hm"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Heavy Machinery
-                      </NavLink>
-                      <NavLink
-                        to="/oil"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Oil and Mineral oil
-                      </NavLink>
-                      <NavLink
-                        to="/ap"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Auto Parts
-                      </NavLink>
-                      <NavLink
-                        to="/me"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Medic Equipments
-                      </NavLink>
-                      <NavLink
-                        to="/ct"
-                        className="w-full border-b-2 border-gray-200 block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-orange-600"
-                        role="menuitem"
-                      >
-                        Construction Tools
-                      </NavLink>
-                    </div>
+                  <div>
+                    <ServiceDropdown />
                   </div>
-
                 )}
-
-
-
-
               </li>
               <li>
                 <NavLink
