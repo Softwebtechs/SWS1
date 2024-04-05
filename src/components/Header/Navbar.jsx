@@ -9,9 +9,28 @@ import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import pIcon from "../../assets/icons/patrai_icon.png";
-import MenuIcon from '@material-ui/icons/Menu';
+import MenuIcon from "@material-ui/icons/Menu";
+import { useState } from "react";
+import ServiceContent from "./ServiceContent";
+import ProjectContent from "./ProjectContent";
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isOpenProject, setIsOpenProject] = useState(false);
+
+  const handleMouseEnter = () => {
+    setIsOpen(true);
+  };
+  const handleMouseEnterProject = () => {
+    setIsOpenProject(true);
+  };
+
+  const handleMouseLeaveProject = () => {
+    setIsOpenProject(false);
+  };
+  const handleMouseLeave = () => {
+    setIsOpen(false);
+  };
   return (
     <>
       <div className="flex flex-col font-sans">
@@ -63,7 +82,6 @@ const Navbar = () => {
                   color: "gray",
                   marginBottom: " 4px",
                   marginRight: "4px",
-                  
                 }}
               />
               <FacebookIcon
@@ -140,8 +158,21 @@ const Navbar = () => {
                           isActive ? "text-orange-500" : "text-gray-500"
                         }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                       }
+                      onMouseEnter={handleMouseEnter}
+                      onMouseLeave={handleMouseLeave}
                     >
                       SERVICES
+                      <div className="relative">
+                        {isOpen && (
+                          <div
+                            className="absolute top-full left-0 "
+                            onMouseEnter={handleMouseEnter}
+                            onMouseLeave={handleMouseLeave}
+                          >
+                            <ServiceContent />
+                          </div>
+                        )}
+                      </div>
                     </NavLink>
                   </li>
                   <li>
@@ -152,8 +183,21 @@ const Navbar = () => {
                           isActive ? "text-orange-500" : "text-gray-500"
                         }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                       }
+                      onMouseEnter={handleMouseEnterProject}
+                      onMouseLeave={handleMouseLeaveProject}
                     >
                       PROJECTS
+                      <div className="relative">
+                        {isOpenProject && (
+                          <div
+                            className="absolute top-full left-0 "
+                            onMouseEnter={handleMouseEnterProject}
+                            onMouseLeave={handleMouseLeaveProject}
+                          >
+                            <ProjectContent />
+                          </div>
+                        )}
+                      </div>
                     </NavLink>
                   </li>
                   <li>
@@ -221,9 +265,7 @@ const Navbar = () => {
             </div>
           </nav>
         </header>
-       
       </div>
-
     </>
   );
 };

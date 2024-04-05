@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
 import EmailIcon from "@material-ui/icons/Email";
 import FacebookIcon from "@material-ui/icons/Facebook";
@@ -7,11 +7,12 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SendIcon from "@material-ui/icons/Send";
+import HoverMenu from "./HoverMenu";
 
 const Footer = () => {
   return (
     <>
-         <div className="flex flex-col">
+      <div className="flex flex-col">
         <div className="h-64 bg-white pt-0 lg:ml-10 ml-5 lg:mt-20 ">
           <div className="lg:flex flex-col lg:mt-0  lg:pt-0   gap-5 ml-1 lg:mb-10 ">
             <h1 className="text-blue-900  text-2xl md:text-5xl font-bold m-5 xl:px-28 ">
@@ -249,8 +250,9 @@ const Footer = () => {
           </p>
         </div>
       </div>
+      <HoverMenu />
     </>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
