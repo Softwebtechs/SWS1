@@ -13,13 +13,18 @@ import MenuIcon from "@material-ui/icons/Menu";
 import { useState } from "react";
 import ServiceContent from "./ServiceContent";
 import ProjectContent from "./ProjectContent";
+import PagesContent from "./PagesContent";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenPages, setIsOpenPages] = useState(false);
   const [isOpenProject, setIsOpenProject] = useState(false);
 
   const handleMouseEnter = () => {
     setIsOpen(true);
+  };
+  const handleMouseEnterPages = () => {
+    setIsOpenPages(true);
   };
   const handleMouseEnterProject = () => {
     setIsOpenProject(true);
@@ -30,6 +35,9 @@ const Navbar = () => {
   };
   const handleMouseLeave = () => {
     setIsOpen(false);
+  };
+  const handleMouseLeavePages = () => {
+    setIsOpenPages(false);
   };
   return (
     <>
@@ -220,8 +228,21 @@ const Navbar = () => {
                           isActive ? "text-orange-500" : "text-gray-500"
                         }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
                       }
+                      onMouseEnter={handleMouseEnterPages}
+                      onMouseLeave={handleMouseLeavePages}
                     >
                       PAGES
+                      <div className="relative">
+                        {isOpenPages && (
+                          <div
+                            className="absolute top-full left-0 "
+                            onMouseEnter={handleMouseEnterPages}
+                            onMouseLeave={handleMouseLeavePages}
+                          >
+                            <PagesContent />
+                          </div>
+                        )}
+                      </div>
                     </NavLink>
                   </li>
                   <li>

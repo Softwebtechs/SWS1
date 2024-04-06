@@ -7,7 +7,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import PhoneIcon from "@material-ui/icons/Phone";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import SendIcon from "@material-ui/icons/Send";
-import HoverMenu from "./HoverMenu";
 
 const Footer = () => {
   return (
@@ -250,7 +249,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <HoverMenu />
     </>
   );
 };

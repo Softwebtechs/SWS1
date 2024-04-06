@@ -74,7 +74,7 @@ const History = () => {
           </div>
         </div>
 
-        <div className="h-auto  2xl:flex md:hidden w-full flex flex-col items-center justify-center gap-5 p-10">
+        <div className="h-auto  md:flex md:hidden w-full flex flex-col items-center justify-center gap-5 p-10">
           <div className="h-[500px] w-96 bg-gray-300 "></div>
           <div className="flex flex-col gap-5 ">
             <div className=" flex flex-col  h-[500px] w-96 bg-pink-500">
