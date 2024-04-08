@@ -11,6 +11,10 @@ import two from "./icons/two.png";
 import three from "./icons/three.png";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
 import SendIcon from "@material-ui/icons/Send";
+import img1 from "./icons/img/img1.jpg";
+import img2 from "./icons/img/img2.jpg";
+import img3 from "./icons/img/img3.jpg";
+import img4 from "./icons/img/img4.jpg";
 
 const Hero = () => {
   return (
@@ -38,7 +42,9 @@ const Hero = () => {
         </div>
         <div className="flex gap-7 flex-col xl:flex-row  ">
           <div className="flex flex-col gap-6 md:pl-0 ">
-            <div className="md:h-96 h-64 md:w-[600px] w-96 bg-gray-400 hover:bg-gray-700"></div>
+            <div className="md:h-96 h-64 md:w-[600px] w-96 bg-gray-400 hover:bg-gray-700">
+              <img src={img2} alt="" />
+            </div>
             <div className="flex flex-col gap-3">
               <h1 className="text-blue-900 font-bold text-2xl  hover:text-orange-600 duration-300">
                 Administrative/Support
@@ -57,7 +63,9 @@ const Hero = () => {
 
           <div className="md:flex flex flex-col  gap-8 mb-[500px] md:mb-0 ">
             <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96  bg-gray-500  hover:bg-gray-700"></div>
+              <div className="md:h-36 h-64 md:w-48 w-96  bg-gray-500  hover:bg-gray-700">
+                <img src={img1} alt="" className="lg:h-36 h-64 w-96 " />
+              </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
                   Finance/Accounting
@@ -80,7 +88,9 @@ const Hero = () => {
             <div className="border-b-2"></div>
 
             <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700"></div>
+              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700">
+                <img src={img3} alt="" className="lg:h-36 h-64 w-96" />
+              </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
                   Finance/Accounting
@@ -103,7 +113,9 @@ const Hero = () => {
             <div className="border-b-2"></div>
 
             <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700"></div>
+              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700">
+                <img src={img4} alt="" className="lg:h-36 h-64 w-96 " />
+              </div>
               <div className="flex flex-col gap-2">
                 <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
                   Finance/Accounting
