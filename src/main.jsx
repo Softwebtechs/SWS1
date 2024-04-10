@@ -21,6 +21,7 @@ import Quote from "./components/Quote/Quote.jsx";
 import Faq from "./components/Faq/Faq.jsx";
 import Shop from "./components/Shop/Shop.jsx";
 import Career from "./components1/Hero.jsx";
+import Portfolio from "./components/Portfolio/Portfolio.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -39,6 +40,7 @@ const router = createBrowserRouter(
       <Route path="faq" element={<Faq />} />
       <Route path="shop" element={<Shop />} />
       <Route path="career" element={<Career />} />
+      <Route path="portfolio" element={<Portfolio />} />
     </Route>
   )
 );
