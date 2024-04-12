@@ -1,13 +1,8 @@
 import React, { useState } from "react";
-import BlogCard from "./BlogCard";
-import img1 from "./img/img1.jpg";
-import img2 from "./img/img2.jpg";
-import img3 from "./img/img3.jpg";
-import img4 from "./img/img4.jpg";
-import img5 from "./img/img5.jpg";
-import img6 from "./img/img6.jpg";
-
+import Blog1 from "./Blog1";
+import Blog2 from "./Blog2";
 const Blog = () => {
+  const [blogType, setBlogType] = useState("Blog1");
   return (
     <>
       <div className="md:h-36 h-56 bg-blue-950  md:flex-row  md:justify-between px-48 md:px-10 xl:px-28 items-center flex flex-col gap-6 justify-center">
@@ -18,27 +13,33 @@ const Blog = () => {
           <div className="flex flex-row gap-5 ">
             <h1 className="text-lg text-gray-300">HOME</h1>
             <p>|</p>
-            <h1 className="text-lg text-gray-300">Blog</h1>
+            <h1 className="text-lg text-gray-300">{blogType}</h1>
           </div>
         </div>
       </div>
       {/* main part */}
-      <div className="lg:flex lg:flex-row flex flex-col gap-20 items-center justify-center mt-20">
-        <BlogCard title={"Puzzle Knowledge"} img={img1} />
-        <BlogCard title={"Electric Power Station"} img={img2} />
-        <BlogCard title={"Changing Engine Gear"} img={img3} />
-      </div>
-      <div className="lg:flex lg:flex-row flex flex-col gap-20 items-center justify-center mt-20">
-        <BlogCard title={"Team Of Worker"} img={img4} />
-        <BlogCard title={"Team Of Worker"} img={img5} />
-        <BlogCard title={"CNC Drilling Machine"} img={img6} />
-      </div>
+      <Blog1 blogType={"Blog1"} selectedBlogType={blogType} />
+      <Blog2 blogType={"Blog2"} selectedBlogType={blogType} />
 
       {/* <PageComponent itemsPerPage={itemsPerPage} /> */}
       <div>
         <div className="flex flex-row gap-3 items-end justify-end pr-20">
-          <button className="h-10 w-12 bg-blue-900 text-white ">prev</button>
-          <button className="h-10 w-12 bg-blue-900 text-white ">next</button>
+          <button
+            className="h-10 w-12 bg-blue-900 text-white"
+            onClick={() => {
+              setBlogType("Blog1");
+            }}
+          >
+            prev
+          </button>
+          <button
+            className="h-10 w-12 bg-blue-900 text-white"
+            onClick={() => {
+              setBlogType("Blog2");
+            }}
+          >
+            next
+          </button>
         </div>
       </div>
     </>

@@ -1,20 +1,12 @@
-import React from "react";
-import ArrowRightAltIcon from "@material-ui/icons/ArrowRightAlt";
-import EmailIcon from "@material-ui/icons/Email";
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
-import LinkedInIcon from "@material-ui/icons/LinkedIn";
-import PhoneIcon from "@material-ui/icons/Phone";
-import TwitterIcon from "@material-ui/icons/Twitter";
-import one from "./icons/one.png";
-import two from "./icons/two.png";
-import three from "./icons/three.png";
 import ArrowForwardIcon from "@material-ui/icons/ArrowForward";
-import SendIcon from "@material-ui/icons/Send";
-import img1 from "./icons/img/img1.jpg";
+import React from "react";
 import img2 from "./icons/img/img2.jpg";
 import img3 from "./icons/img/img3.jpg";
 import img4 from "./icons/img/img4.jpg";
+import one from "./icons/one.png";
+import three from "./icons/three.png";
+import two from "./icons/two.png";
+import checkBox from "./check_box.png";
 
 const Hero = () => {
   return (
@@ -32,105 +24,130 @@ const Hero = () => {
         </div>
       </div>
       <div className="h-[1800px] xl:h-[1000px]   flex items-center flex-col gap-10 justify-center mt-96 m-10  md:mt-0">
-        <div className=" flex items-center flex-col md:pt-44 pt-48 mt-20 md:mt-0">
-          <h1 className="text-blue-900 md:text-6xl text-4xl font-bold mb-2">
+        <div className=" flex items-center flex-col md:pt-0 pt-48 mt-20 md:mt-0">
+          <h1 className="text-blue-900 md:text-5xl text-4xl font-semibold mb-2">
             Our Job Requirements
           </h1>
-          <h1 className="text-orange-500 md:text-6xl text-4xl font-bold">
+          <h1 className="text-orange-500 md:text-5xl text-4xl font-semibold">
             Open Positions
           </h1>
         </div>
-        <div className="flex gap-7 flex-col xl:flex-row  ">
-          <div className="flex flex-col gap-6 md:pl-0 ">
-            <div className="md:h-96 h-64 md:w-[600px] w-96 bg-gray-400 hover:bg-gray-700">
-              <img src={img2} alt="" />
+        <div className=" flex gap-7 flex-col xl:flex-row   ">
+          <div className="flex flex-col gap-6 md:pl-0 md:w-[600px] w-96 group ">
+            <div className=" md:h-96 h-64 md:w-[600px] w-96 bg-gray-400 hover:bg-gray-700 relative">
+              <img src={img2} alt="" className="absolute" />
+              <div className="relative md:h-96 h-64 md:w-[600px] w-96 bg-blue-950 opacity-0 group-hover:opacity-45 duration-300 ease-in-out" />
             </div>
-            <div className="flex flex-col gap-3">
-              <h1 className="text-blue-900 font-bold text-2xl  hover:text-orange-600 duration-300">
+            <div className="flex flex-col gap-3 mt-5 items-start">
+              <h1 className="text-blue-900 font-semibold text-2xl  hover:text-orange-600 duration-300 cursor-pointer">
                 Administrative/Support
               </h1>
-              <h1 className="font-semibold">
+              <div className="font-normal flex gap-5">
                 {" "}
-                <span className="text-orange-500">Eligibility-</span>
-                <span className="text-blue-500"> 2+years of experince</span>
-                <span className="text-orange-500"> Vacancies -</span>
-                <span className="text-blue-500"> 3 Post</span>
-              </h1>
-              <p>Lorem ipsum dolor sit amet elit. Impedit, possimus?</p>
-              <h2 className="text-orange-500">Apply Now &gt; </h2>
+                <div>
+                  <span className="text-orange-500">Eligibility-</span>
+                  <span className="text-blue-900"> 2+years of experince</span>
+                </div>
+                <div>
+                  <span className="text-orange-500"> Vacancies -</span>
+                  <span className="text-blue-00"> 3 Post</span>
+                </div>
+              </div>
+              <p className="w-full text-gray-500 text-base">
+                Proin eu malesuada quam, et mollis nulla. Maecenas fringilla
+                eget massa sed dignissim. Aliquam...
+              </p>
+              <button className="text-orange-500 text-sm font-medium hover:text-gray-500">
+                Apply Now &gt;{" "}
+              </button>
             </div>
           </div>
 
           <div className="md:flex flex flex-col  gap-8 mb-[500px] md:mb-0 ">
-            <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96  bg-gray-500  hover:bg-gray-700">
-                <img src={img1} alt="" className="lg:h-36 h-64 w-96 " />
+            <div className="md:flex md:flex-row flex-col gap-8 group">
+              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700 relative">
+                <img
+                  src={img2}
+                  alt=""
+                  className="absolute md:h-36 h-64 md:w-48 w-96"
+                />
+                <div className="relative md:h-36 h-64 md:w-48 w-96 bg-blue-950 opacity-0 group-hover:opacity-45 duration-300 ease-in-out" />
               </div>
               <div className="flex flex-col gap-2">
-                <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
-                  Finance/Accounting
+                <h1 className="text-blue-900 font-semibold text-2xl  hover:text-orange-600 duration-300 cursor-pointer">
+                  Spare Parts Manufacturing
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm ">
                   {" "}
                   <span className="text-orange-500">Eligibility-</span>
-                  <span className="text-blue-500"> 2+years of experince</span>
+                  <span className="text-blue-900"> 3+ years of experince</span>
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm ">
                   {" "}
                   <span className="text-orange-500">Vacancies -</span>
-                  <span className="text-blue-500"> 8 Posts</span>
+                  <span className="text-blue-900"> 8 Posts</span>
                 </h1>
-                <div className="h-auto w-64">
+                <div className="h-auto w-64 text-gray-500 text-sm font-normal">
                   <p>Lorem ipsum dolor sit amet elit. Impedit, possimus?</p>{" "}
                 </div>
               </div>
             </div>
             <div className="border-b-2"></div>
 
-            <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700">
-                <img src={img3} alt="" className="lg:h-36 h-64 w-96" />
+            <div className="md:flex md:flex-row flex-col gap-8 group">
+              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700 relative">
+                <img
+                  src={img3}
+                  alt=""
+                  className="absolute md:h-36 h-64 md:w-48 w-96"
+                />
+                <div className="relative md:h-36 h-64 md:w-48 w-96 bg-blue-950 opacity-0 group-hover:opacity-45 duration-300 ease-in-out" />
               </div>
               <div className="flex flex-col gap-2">
-                <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
-                  Finance/Accounting
+                <h1 className="text-blue-900 font-semibold text-2xl  hover:text-orange-600 duration-300 cursor-pointer">
+                  Human Resources
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm">
                   {" "}
                   <span className="text-orange-500">Eligibility-</span>
-                  <span className="text-blue-500"> 2+years of experince</span>
+                  <span className="text-blue-900"> 2+years of experince</span>
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm ">
                   {" "}
                   <span className="text-orange-500">Vacancies -</span>
-                  <span className="text-blue-500"> 8 Posts</span>
+                  <span className="text-blue-900"> 8 Posts</span>
                 </h1>
-                <div className="h-auto w-64">
+                <div className="h-auto w-64 text-sm font-normal">
                   <p>Lorem ipsum dolor sit amet elit. Impedit, possimus?</p>{" "}
                 </div>
               </div>
             </div>
             <div className="border-b-2"></div>
 
-            <div className="md:flex md:flex-row flex-col gap-8">
-              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700">
-                <img src={img4} alt="" className="lg:h-36 h-64 w-96 " />
+            <div className="md:flex md:flex-row flex-col gap-8 group">
+              <div className="md:h-36 h-64 md:w-48 w-96 bg-gray-500  hover:bg-gray-700 relative">
+                <img
+                  src={img4}
+                  alt=""
+                  className="absolute md:h-36 h-64 md:w-48 w-96"
+                />
+                <div className="relative md:h-36 h-64 md:w-48 w-96 bg-blue-950 opacity-0 group-hover:opacity-45 duration-300 ease-in-out" />
               </div>
               <div className="flex flex-col gap-2">
-                <h1 className="text-blue-900 font-bold text-2xl mt-5 sm:mt-0  hover:text-orange-600 duration-300">
-                  Finance/Accounting
+                <h1 className="text-blue-900 font-semibold text-2xl  hover:text-orange-600 duration-300 cursor-pointer">
+                  Finance – Accounting
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm ">
                   {" "}
                   <span className="text-orange-500">Eligibility-</span>
-                  <span className="text-blue-500"> 2+years of experince</span>
+                  <span className="text-blue-900"> 2+years of experince</span>
                 </h1>
-                <h1 className="font-semibold ">
+                <h1 className="font-normal text-sm">
                   {" "}
                   <span className="text-orange-500">Vacancies -</span>
-                  <span className="text-blue-500"> 8 Posts</span>
+                  <span className="text-blue-900"> 8 Posts</span>
                 </h1>
-                <div className="h-auto w-64">
+                <div className="h-auto w-64 text-sm font-normal">
                   <p>Lorem ipsum dolor sit amet elit. Impedit, possimus?</p>{" "}
                 </div>
               </div>
@@ -138,97 +155,106 @@ const Hero = () => {
             <div className="border-b-2"></div>
           </div>
         </div>
-        <button className=" w-36 bg-blue-900 rounded text-white    p-4">
-          View all post
-        </button>{" "}
-        <br />
       </div>
 
       <div className="flex flex-col">
         <div className="lg:h-[500px] h-auto bg-blue-900 pt-8 ">
-          <div className="md:flex lg:flex-row   flex-col xl:ml-64 ml-18 items-start lg:gap-44 gap-20  lg:ml-0 mb-20">
-            <div className="flex flex-col md:flex-row md:gap-44 gap-3">
-              <div class="group flex flex-col items-center justify-center gap-5 group mt-5">
-                <img src={one} alt="" />
-                <h1 className="text-white text-2xl font-normal hover:text-orange-600 duration-500">
-                  Just Freshers
-                </h1>
-                <p class="sm:opacity-0 transition-opacity duration-500 group-hover:opacity-100 mt-2">
-                  <div className="h-auto w-56 ">
-                    <p className="text-white text-center lg:hidden sm:group-hover:block  duration-500  ">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Sed, molestias.
-                    </p>
-                  </div>
-                </p>
-                <p class="opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                  <ArrowForwardIcon
-                    style={{
-                      color: "white",
-                    }}
-                  />
-                </p>
-              </div>
-              <div class="group flex flex-col items-center justify-center gap-5 group mt-5">
-                <img src={two} alt="" />
-                <h1 className="text-white text-2xl font-normal hover:text-orange-600 duration-500">
-                  Experince engineers
-                </h1>
-                <p class="sm:opacity-0 transition-opacity duration-500 group-hover:opacity-100 mt-2">
-                  <div className="h-auto w-56 ">
-                    <p className="text-white text-center lg:hidden sm:group-hover:block  duration-500  ">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Sed, molestias.
-                    </p>
-                  </div>
-                </p>
-                <p class="opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                  <ArrowForwardIcon
-                    style={{
-                      color: "white",
-                    }}
-                  />
-                </p>
-              </div>
-            </div>
-            <div class="group flex flex-col items-center justify-center gap-5 group mt-5">
-              <img src={three} alt="" />
-              <h1 className="text-white text-2xl font-normal hover:text-orange-600 duration-500">
-                Admin Expert
-              </h1>
-              <p class="sm:opacity-0 transition-opacity duration-500 group-hover:opacity-100 mt-2">
-                <div className="h-auto w-56 ">
-                  <p className="text-white text-center xl:flex sm:hidden sm:group-hover:block  duration-500  ">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Sed, molestias.
-                  </p>
+          <div className="md:flex lg:flex-row   flex-col  ml-18 md:justify-center md:items-center items-start lg:gap-44 gap-20  lg:ml-0 mb-20">
+            <div className="flex flex-col md:flex-row md:justify-between md:px-44 md:w-full gap-10 md:h-80">
+              {/* just fresher */}
+              <div class="group flex flex-col items-center justify-center gap-1 mt-5">
+                <div className="group-hover:-translate-y-5 transition duration-100 flex flex-col gap-5 justify-center items-center">
+                  <img src={one} alt="" />
+                  <h1 className="text-white text-2xl font-normal group-hover:text-orange-600 duration-500">
+                    Just Freshers
+                  </h1>
                 </div>
-              </p>
-              <p class="opacity-100 transition-opacity duration-500 group-hover:opacity-0">
-                <ArrowForwardIcon
-                  style={{
-                    color: "white",
-                  }}
-                />
-              </p>
+                <p class="opacity-0 transition-opacity duration-500 group-hover:opacity-100 ">
+                  <div className="h-auto w-56 ">
+                    <p className="text-white text-center sm:hidden sm:group-hover:block  duration-500  ">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sed, molestias.
+                    </p>
+                  </div>
+                </p>
+                <p class="opacity-100 transition-opacity duration-500 group-hover:opacity-0">
+                  <ArrowForwardIcon
+                    style={{
+                      color: "white",
+                    }}
+                  />
+                </p>
+              </div>
+
+              {/*  experience engineer */}
+              <div class="group flex flex-col items-center justify-center gap-1 group mt-5">
+                <div className="group-hover:-translate-y-5 transition duration-100 flex flex-col gap-5 justify-center items-center">
+                  <img src={two} alt="" />
+                  <h1 className="text-white text-2xl font-normal group-hover:text-orange-600 duration-500">
+                    Experince engineers
+                  </h1>
+                </div>
+                <p class="opacity-0 transition-opacity duration-500 group-hover:opacity-100 ">
+                  <div className="h-auto w-56 ">
+                    <p className="text-white text-center sm:hidden sm:group-hover:block  duration-500  ">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sed, molestias.
+                    </p>
+                  </div>
+                </p>
+                <p class="opacity-100 transition-opacity duration-500 group-hover:opacity-0">
+                  <ArrowForwardIcon
+                    style={{
+                      color: "white",
+                    }}
+                  />
+                </p>
+              </div>
+
+              {/* Admin Expert */}
+
+              <div class="group flex flex-col items-center justify-center gap-1 group mt-5">
+                <div className="group-hover:-translate-y-5 transition duration-100 flex flex-col gap-5 justify-center items-center">
+                  <img src={three} alt="" />
+                  <h1 className="text-white text-2xl font-normal group-hover:text-orange-600 duration-500">
+                    Admin Expert
+                  </h1>
+                </div>
+                <p class="opacity-0 transition-opacity duration-500 group-hover:opacity-100  ">
+                  <div className="h-auto w-56 ">
+                    <p className="text-white text-center sm:hidden sm:group-hover:block  duration-500   ">
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Sed, molestias.
+                    </p>
+                  </div>
+                </p>
+                <p class="opacity-100  transition-opacity duration-500 group-hover:opacity-0">
+                  <ArrowForwardIcon
+                    style={{
+                      color: "white",
+                    }}
+                  />
+                </p>
+              </div>
             </div>
           </div>
 
-          <div className="h-auto xl:w-[1200px]  w-full xl:ml-44   bg-white  drop-shadow-md flex  flex-col  gap-5 p-10">
-            <div className="ml-5 font-semibold text-3xl flex flex-col gap-4">
-              <h1 className="text-blue-900 pt-5">
+          <div className="h-auto xl:w-[1200px]  w-full xl:ml-28   bg-white  drop-shadow-md flex  flex-col  gap-5 p-5 xl:mb-20">
+            <div className="ml-5 font-semibold text-4xl flex flex-col gap-4">
+              <h1 className="text-blue-900 py-5">
                 Position for{" "}
                 <span className="text-orange-500">Experince engineers</span>
               </h1>
 
-              <div className="h-auto w-full">
-                <p className="text-sm text-gray-500 text-center line-clamp-1">
-                  Loeius. Magnam inventore neque sint tempora vero eos
-                  perferendis consectetur tenetur nihil dicta impedit veritatis
-                  numquam labore ex, quibusdam similique voluptates molestiae
-                  eius dignissimos provident enim? Rem amet ipsam quia autem,
-                  repellendus fugit reiciendis non dolor. Excepturi natus enim
-                  dignis dolorum!
+              <div className="h-auto w-full ">
+                <p className="text-sm text-gray-600 font-normal text-start leading-6 ">
+                  In enim justo, rhoncus ut, imperdiet a, venenatis vitae,
+                  justo. Nullam dictum felis eu pede mollis pretium. Integer
+                  tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean
+                  vulputate eleifend tellus. Aenean leo ligula, porttitor eu,
+                  consequat vitae, eleifend ac, enim. Aliquam lorem ante,
+                  dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra
+                  nulla ut metus varius laoreet.
                 </p>
               </div>
             </div>
@@ -243,10 +269,19 @@ const Hero = () => {
                   Exercitationem itaque, laudantium aliquam est a aut corporis
                   quas nostrum inventore esse.
                 </p>
-                <div className="text-gray-500 ml-3">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                <div className="text-gray-500 flex flex-col gap-3 ">
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
                 </div>
               </div>
               <div className="lg:w-1/3 w-full flex flex-col gap-4 m-1">
@@ -258,10 +293,19 @@ const Hero = () => {
                   Exercitationem itaque, laudantium aliquam est a aut corporis
                   quas nostrum inventore esse.
                 </p>
-                <div className="text-gray-500 ml-3">
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                  <p>Lorem ipsum dolor sit amet.</p>
+                <div className="text-gray-500 flex flex-col gap-3">
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
+                  <div className="flex gap-2  items-center">
+                    <img src={checkBox} alt="" className="h-4 w-4" />
+                    <p>Lorem ipsum dolor sit amet.</p>
+                  </div>
                 </div>
               </div>
               <div className="lg:w-1/3 w-full flex flex-col gap-4 m-1">
@@ -273,14 +317,17 @@ const Hero = () => {
                   esse.
                 </p>
                 <div>
-                  <span className="text-orange-500">Download Here &gt; </span>
+                  <button className="text-orange-500 cursor-pointer py-2 text-sm">
+                    Download Here &gt;{" "}
+                  </button>
+
                   <p className="text-gray-500">
                     You can apply online form and submit for the post we listed
                     here!
                   </p>
                 </div>
                 <div className="flex justify-center text-center">
-                  <button className="text-white bg-blue-900 w-1/2 m-5 p-2 text-2xl">
+                  <button className="text-white bg-blue-900 w-36 m-5 h-10 text-sm hover:bg-orange-500 hover:text-white">
                     Apply Online
                   </button>
                 </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import img from "./man-image.jpg";
+import Component from "./Component";
 
 const Faq = () => {
   return (
@@ -12,50 +13,53 @@ const Faq = () => {
 
         <div className="lg:flex lg:flex-row lg:gap-5  flex flex-col gap-10 md:max-lg:gap-0 items-center justify-center">
           <div className="flex flex-col gap-5 mt-20 items-center justify-center m-5 ">
-            <div className="h-auto  lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96 xl:w-[800px] bg-white border border-gray-300 p-5">
-              <h1 className="text-orange-600 font-semibold ml-5">
-                What services can I outsource?
-              </h1>
-              <p className="w-80 xl:w-[750px] font-semibold text-gray-500 ml-5 ">
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                Cras dapibus.
-              </p>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px]  md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                How Can I View Your Annual Report To Know That How You Use Our
-                Money
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">Don't Goverment Provide Any Support?</h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Does Provide Information About Where My spares Is Used?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Hoe Does Your Team Raised Fund for Resourses
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                What Method Do Charity Use To Choose Project For Its Support?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                How Does Charity Work To Ensure Child Rights?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Will My Little Contribution Be Helpful For You?
-              </h1>
-            </div>
+            <Component
+              heading={"What Service Can I Outsource "}
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+            <Component
+              heading={"Don't Goverment Provide Any Support?"}
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+
+            <Component
+              heading={
+                "Does Provide Information About Where My spares Is Used?"
+              }
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+            <Component
+              heading={" Hoe Does Your Team Raised Fund for Resourses"}
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+            <Component
+              heading={
+                " What Method Do Charity Use To Choose Project For Its Support?"
+              }
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+            <Component
+              heading={" How Does Charity Work To Ensure Child Rights?"}
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
+            <Component
+              heading={"Will My Little Contribution Be Helpful For You? "}
+              paragraph={
+                "In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus."
+              }
+            />
           </div>
           <div className="flex flex-col gap-10 md:max-lg:gap-6 mt-20">
             <div className="h-72 lg:max-xl:h-56 md:max-lg:h-96 md:max-lg:w-[700px] lg:max-xl:w-64 w-96 bg-gray-400"></div>
