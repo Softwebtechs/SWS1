@@ -121,7 +121,7 @@ const Navbar = () => {
         </div>
 
         <header className="shadow sticky z-50 ">
-          <nav className=" bg-white border-gray-200  lg:px-6 py-2.5">
+          <nav className=" bg-white border-gray-200   py-2.5">
             <div className="flex lg:flex-row flex-col gap-3 md:justify-between sm:px-48 items-center p-5 ">
               <div>
                 <Link to="/" className="flex items-center">
@@ -139,8 +139,10 @@ const Navbar = () => {
                       to="/"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8  lg:p-0 `
                       }
                     >
                       HOME
@@ -151,8 +153,10 @@ const Navbar = () => {
                       to="/about"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                     >
                       ABOUT
@@ -163,8 +167,10 @@ const Navbar = () => {
                       to="/services"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                       onMouseEnter={handleMouseEnter}
                       onMouseLeave={handleMouseLeave}
@@ -188,8 +194,10 @@ const Navbar = () => {
                       to="/projects"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                       onMouseEnter={handleMouseEnterProject}
                       onMouseLeave={handleMouseLeaveProject}
@@ -208,25 +216,16 @@ const Navbar = () => {
                       </div>
                     </NavLink>
                   </li>
+
                   <li>
                     <NavLink
-                      to="/blog"
+                      to="/team"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
-                      }
-                    >
-                      BLOG
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      to="/pages"
-                      className={({ isActive }) =>
-                        `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                       onMouseEnter={handleMouseEnterPages}
                       onMouseLeave={handleMouseLeavePages}
@@ -250,8 +249,10 @@ const Navbar = () => {
                       to="portfolio"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                     >
                       PORTFOLIO
@@ -262,8 +263,10 @@ const Navbar = () => {
                       to="/contact"
                       className={({ isActive }) =>
                         `block py-2 pr-4 pl-3 duration-200 ${
-                          isActive ? "text-orange-500" : "text-gray-500"
-                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 lg:p-0`
+                          isActive
+                            ? "text-orange-500 underline underline-offset-8"
+                            : "text-gray-500"
+                        }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-700 hover:underline hover:underline-offset-8 lg:p-0`
                       }
                     >
                       CONTACT

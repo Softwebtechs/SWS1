@@ -1,74 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
+import FaqQes from "./FaqQes";
+import check from "./check_box.png";
 import img from "./man-image.jpg";
+import FaqBottomCard from "./FaqBottomCard";
+import img1 from "./img1.jpg";
+import img2 from "./img2.jpg";
+import img3 from "./img3.jpg";
 
 const Faq = () => {
+  const [isSelected, setIsSelected] = useState(false);
+  const [selected, setSelected] = useState(isSelected);
+
   return (
     <>
       <div>
-        <div className="flex flex-col items-center justify-center text-5xl mt-20 font-bold">
+        <div className="flex flex-col items-center justify-center text-5xl mt-20 font-bold gap-3">
           <h1 className="text-blue-900">Faq’s</h1>
           <h1 className="text-orange-600">Common Questions</h1>
         </div>
 
         <div className="lg:flex lg:flex-row lg:gap-5  flex flex-col gap-10 md:max-lg:gap-0 items-center justify-center">
           <div className="flex flex-col gap-5 mt-20 items-center justify-center m-5 ">
-            <div className="h-auto  lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96 xl:w-[800px] bg-white border border-gray-300 p-5">
-              <h1 className="text-orange-600 font-semibold ml-5">
-                What services can I outsource?
-              </h1>
-              <p className="w-80 xl:w-[750px] font-semibold text-gray-500 ml-5 ">
-                In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-                Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
-                Cras dapibus.
-              </p>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px]  md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                How Can I View Your Annual Report To Know That How You Use Our
-                Money
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">Don't Goverment Provide Any Support?</h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Does Provide Information About Where My spares Is Used?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Hoe Does Your Team Raised Fund for Resourses
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                What Method Do Charity Use To Choose Project For Its Support?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                How Does Charity Work To Ensure Child Rights?
-              </h1>
-            </div>
-            <div className="h-20 lg:max-xl:w-[570px] md:max-lg:w-[700px] w-96  xl:w-[800px] font-semibold border border-gray-300 text-blue-900 flex items-center ">
-              <h1 className="ml-5">
-                Will My Little Contribution Be Helpful For You?
-              </h1>
-            </div>
+            <FaqQes title={"What services can I outsource?"} />
+            <FaqQes
+              title={
+                "How Can I View Your Annual Report To Know That How You Use OurMoney"
+              }
+            />
+            <FaqQes title={"Don't Goverment Provide Any Support?"} />
+            <FaqQes
+              title={"Does Provide Information About Where My spares Is Used?"}
+            />
+            <FaqQes title={"Hoe Does Your Team Raised Fund for Resourses"} />
+            <FaqQes
+              title={
+                "What Method Do Charity Use To Choose Project For Its Support?"
+              }
+            />
+            <FaqQes title={"How Does Charity Work To Ensure Child Rights?"} />
+            <FaqQes title={"Will My Little Contribution Be Helpful For You?"} />
           </div>
           <div className="flex flex-col gap-10 md:max-lg:gap-6 mt-20">
             <div className="h-72 lg:max-xl:h-56 md:max-lg:h-96 md:max-lg:w-[700px] lg:max-xl:w-64 w-96 bg-gray-400"></div>
-            <div className="h-72 lg:max-xl:h-96 md:max-lg:w-[700px] lg:max-xl:w-64 w-96 bg-blue-400">
+            <div className="h-72 lg:max-xl:h-96 md:max-lg:w-[700px] lg:max-xl:w-64 w-96 bg-blue-900 bg-opacity-90">
               <div className="flex flex-col items-center justify-center gap-5 mt-10">
                 <h1 className="text-orange-600 lg:max-xl:w-36 text-2xl  font-semibold leading-7">
                   You still have questions ?
                 </h1>
-                <p className="text-white text-lg w-72 lg:max-xl:w-36 leading-7  ">
+                <p className="text-white text-sm w-64 text-center lg:max-xl:w-36 leading-7  ">
                   Is there any query left? You can directly share with us and
                   clear away all your confusions.
                 </p>
-                <button className="h-10 w-36 bg-orange-600 text-white text-lg ">
+                <button className="h-12 w-36 bg-orange-600 text-white text-sm hover:bg-white hover:text-blue-950 ">
                   Ask Question?
                 </button>
               </div>
@@ -93,49 +76,109 @@ const Faq = () => {
             </h1>
           </div>
           <div className="flex flex-col gap-0 ">
-            <div className="flex flex-row  ">
-              <div className="h-14 w-32 bg-orange-600 text-white text-xl font-semibold text-center p-2 border border-gray-400">
+            <div className="flex flex-row gap-0.5 ">
+              <button
+                onClick={() => {
+                  setIsSelected("1");
+                }}
+                className={` ${
+                  isSelected == "1"
+                    ? "bg-orange-600 text-white "
+                    : " bg-white text-blue-900"
+                } h-12 w-32   text-base font-bold text-center p-2 `}
+              >
                 Innovation
-              </div>
-              <div className="h-14 w-32 bg-white text-blue-900 text-xl font-semibold text-center p-2 border border-gray-400">
+              </button>
+              <button
+                onClick={() => {
+                  setIsSelected("2");
+                }}
+                className={`${
+                  isSelected == "2"
+                    ? "bg-orange-600 text-white "
+                    : " bg-white text-blue-900"
+                } h-12 w-32  text-base font-bold text-center p-2 `}
+              >
                 Production
-              </div>
-              <div className="h-14 w-32  bg-white text-blue-900 text-xl font-semibold text-center p-2 border border-gray-400">
+              </button>
+              <button
+                onClick={() => {
+                  setIsSelected("3");
+                }}
+                className={`${
+                  isSelected == "3"
+                    ? "bg-orange-600 text-white "
+                    : " bg-white text-blue-900"
+                } h-12 w-32  text-base font-bold text-center p-2 `}
+              >
                 Quality
-              </div>
-              <div className="h-14 w-32  bg-white text-blue-900 text-xl font-semibold text-center p-2 border border-gray-400">
+              </button>
+              <button
+                onClick={() => {
+                  setIsSelected("4");
+                }}
+                className={`${
+                  isSelected == "4"
+                    ? "bg-orange-600 text-white "
+                    : " bg-white text-blue-900"
+                } h-12 w-32   text-base font-bold text-center p-`}
+              >
                 Guarantee
-              </div>
+              </button>
             </div>
-            <div className="h-auto w-full bg-gray-50 flex flex-col gap-5 p-8 bg-opacity-80 mx-5">
-              <p className="text-gray-500 ml-10">
+            <div className="h-auto w-full bg-gray-50 flex flex-col gap-5  p-10 bg-opacity-80 ">
+              <p className="text-gray-500 ">
                 Vivamus elementum semper nisi. Curabitur ullamcorper ultricies
                 nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus,{" "}
               </p>
               <div className="md:flex md:flex-row flex flex-col gap-10 ">
-                <div className="flex flex-col gap-5 ml-20">
-                  <h1 className="text-gray-500">In enim justo rhoncus ut.</h1>
-                  <h1 className="text-gray-500">
-                    Nullam dictum felis eu pede.
-                  </h1>
-                  <h1 className="text-gray-500">
-                    Vivamus elementum semper nisi.
-                  </h1>
-                  <h1 className="text-gray-500">
-                    Aenean vulputate. eleifend tellus.
-                  </h1>
+                <div className="flex flex-col gap-5 text-sm ">
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">In enim justo rhoncus ut.</h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Nullam dictum felis eu pede.
+                    </h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Vivamus elementum semper nisi.
+                    </h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Aenean vulputate. eleifend tellus.
+                    </h1>
+                  </div>
                 </div>
-                <div className="flex flex-col gap-5 ml-20">
-                  <h1 className="text-gray-500">In enim justo rhoncus ut.</h1>
-                  <h1 className="text-gray-500">
-                    Nullam dictum felis eu pede.
-                  </h1>
-                  <h1 className="text-gray-500">
-                    Vivamus elementum semper nisi.
-                  </h1>
-                  <h1 className="text-gray-500">
-                    Aenean vulputate. eleifend tellus.
-                  </h1>
+                <div className="flex flex-col gap-5 text-sm ">
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">In enim justo rhoncus ut.</h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Nullam dictum felis eu pede.
+                    </h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Vivamus elementum semper nisi.
+                    </h1>
+                  </div>
+                  <div className="flex gap-2 justify-start items-center">
+                    <img src={check} alt="" className="h-4" />
+                    <h1 className="text-gray-500">
+                      Aenean vulputate. eleifend tellus.
+                    </h1>
+                  </div>
                 </div>
               </div>
             </div>
@@ -147,55 +190,16 @@ const Faq = () => {
 
       {/* last part of the page */}
       <div className="mt-20">
-        <div className="flex flex-row text-6xl font-bold  gap-2 ml-28">
+        <div className="flex flex-row text-5xl font-bold  gap-2 ml-28">
           <h1 className="text-blue-900">
             Our Experience and{" "}
             <span className="text-orange-600"> Industry Knowledge. </span>
           </h1>
         </div>
-        <div className="flex flex-wrap gap-20 items-center justify-center mt-20">
-          <div className="flex flex-col gap-3">
-            <div className="h-64  w-96 bg-gray-400"></div>
-            <div className="flex flex-col gap-5">
-              <h1 className="text-blue-900 text-xl font-semibold">
-                Storage Hall
-              </h1>
-              <p className="h-auto w-96 text-gray-600">
-                Cras est tellus, tincidunt eu ornare et, euismod sit amet sem.
-                Ut eget tempor turpis, eget accumsan odio metus vitae commodo
-                auctor, ex urna.
-              </p>
-              <h1 className="text-orange-600">Read More &gt;</h1>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3">
-            <div className="h-64  w-96 bg-gray-400"></div>
-            <div className="flex flex-col gap-5">
-              <h1 className="text-blue-900 text-xl font-semibold">
-                Storage Hall
-              </h1>
-              <p className="h-auto w-96 text-gray-600">
-                Cras est tellus, tincidunt eu ornare et, euismod sit amet sem.
-                Ut eget tempor turpis, eget accumsan odio metus vitae commodo
-                auctor, ex urna.
-              </p>
-              <h1 className="text-orange-600">Read More &gt;</h1>
-            </div>
-          </div>
-          <div className="flex flex-col gap-3">
-            <div className="h-64  w-96 bg-gray-400"></div>
-            <div className="flex flex-col gap-5">
-              <h1 className="text-blue-900 text-xl font-semibold">
-                Storage Hall
-              </h1>
-              <p className="h-auto w-96 text-gray-600">
-                Cras est tellus, tincidunt eu ornare et, euismod sit amet sem.
-                Ut eget tempor turpis, eget accumsan odio metus vitae commodo
-                auctor, ex urna.
-              </p>
-              <h1 className="text-orange-600">Read More &gt;</h1>
-            </div>
-          </div>
+        <div className="flex flex-row gap-16 justify-center items-center p-10">
+          <FaqBottomCard title={"Puzzle Knowledge"} img={img1} />
+          <FaqBottomCard title={"Electric Power Station"} img={img2} />
+          <FaqBottomCard title={"Changing Engine Gear"} img={img3} />
         </div>
       </div>
     </>

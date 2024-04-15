@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowRightLong } from "react-icons/fa6";
 import Card from "./Component/Card.jsx";
 import qone from "./img/q1.png";
 import qtwo from "./img/q2.png";
@@ -17,11 +18,13 @@ const Quote = () => {
         </h1>
       </div>
       <div className="lg:flex lg:flex-row flex flex-col gap-14 items-center justify-center mt-20 lg:max-xl:flex lg:max-xl:flex-col lg:max-xl:items-start lg:max-xl:ml-48">
-        <div className="lg:flex lg:flex-row flex flex-col gap-14  ">
+        <div className="lg:flex lg:flex-row flex flex-col flex-wrap gap-14 justify-start items-center  ">
           <Card img_url={qone} title={"Fill the Details"} />
+          <FaArrowRightLong style={{ fontSize: 30 }} color="#172554" />
           <Card img_url={qtwo} title={"Get the Estimate"} />
+          <FaArrowRightLong style={{ fontSize: 30 }} color="#172554" />
+          <Card img_url={qthree} title={"Confirmation"} />
         </div>
-        <Card img_url={qthree} title={"Confirmation"} />
       </div>
       <div className="xl:flex xl:flex-row gap-10 items-center justify-center flex flex-col lg:max-xl:w-full ">
         <div className="flex flex-col">
@@ -30,33 +33,24 @@ const Quote = () => {
           </h1>
           <div className="md:flex md:flex-row flex flex-col gap-10 mt-10 items-start ml-20">
             <div>
-              <input
-                type="text"
-                placeholder="   Project type"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
-              />
+              <select
+                name="cars"
+                id="Project types"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
+              >
+                <option value="Project Type">Project Type</option>
+                <option value="saab">Electronic Material</option>
+                <option value="mercedes">Power Systems</option>
+                <option value="audi">Heavy Machinery</option>
+                <option value="audi">Auto Parts</option>
+                <option value="audi">Oil and Mineral oil</option>
+              </select>
             </div>
             <div>
               <input
                 type="text"
-                placeholder="   Quality required*"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
-              />
-            </div>
-          </div>
-          <div className="md:flex md:flex-row flex flex-col gap-10 mt-10 items-start ml-20">
-            <div>
-              <input
-                type="text"
-                placeholder="   Scheduled days*"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
-              />
-            </div>
-            <div>
-              <input
-                type="text"
-                placeholder="   Required Person"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
+                placeholder="Quality required*"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
               />
             </div>
           </div>
@@ -64,15 +58,31 @@ const Quote = () => {
             <div>
               <input
                 type="text"
-                placeholder="   Company name*"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
+                placeholder="Scheduled days*"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
               />
             </div>
             <div>
               <input
                 type="text"
-                placeholder="   Company Address"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
+                placeholder="Required Person"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
+              />
+            </div>
+          </div>
+          <div className="md:flex md:flex-row flex flex-col gap-10 mt-10 items-start ml-20">
+            <div>
+              <input
+                type="text"
+                placeholder="Company name*"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
+              />
+            </div>
+            <div>
+              <input
+                type="text"
+                placeholder="Company Address"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
               />
             </div>
           </div>
@@ -80,19 +90,19 @@ const Quote = () => {
             <div>
               <input
                 type="digits"
-                placeholder="   Phone No*"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
+                placeholder="Phone No*"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
               />
             </div>
             <div>
               <input
                 type="email"
-                placeholder="   Email Address*"
-                className="h-10 w-72 bg-white border border-gray-400 text-lg"
+                placeholder="Email Address*"
+                className="h-10 w-72 bg-white border border-gray-300 text-sm text-gray-400 font-semibold p-2 outline-none"
               />
             </div>
           </div>
-          <h1 className="text-black ml-20 mt-20 h-auto md:w-[700px] w-80">
+          <h1 className="text-gray-500 ml-20 mt-20 h-auto md:w-[700px] w-80">
             {" "}
             *Need to fill marked. Make a call for more details required. We will
             call you and give a cost estimate of your project upon your
@@ -101,9 +111,9 @@ const Quote = () => {
           <input
             type="text"
             placeholder="Any information"
-            className="h-36 md:w-[650px] w-80 bg-white border p-5 border-gray-400 ml-20 mt-20 text-start text-xl"
+            className="h-36 md:w-[650px] w-80 bg-white border  pl-4 border-gray-400 ml-20 mt-20 text-start text-base outline-none"
           />
-          <button className="h-10 w-36 bg-orange-600 mt-20 ml-20 text-white text-xl">
+          <button className="h-12 w-40 bg-orange-600 mt-20 ml-20 text-white text-base hover:bg-blue-950   ">
             Submit Now
           </button>
         </div>

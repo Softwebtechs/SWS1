@@ -1,8 +1,9 @@
 import React from "react";
 
-const BlogCard = ({ title, img }) => {
+const FaqBottomCard = ({ title, img }) => {
   return (
     <>
+      {" "}
       <div className="h-[470px]  relative  transition-all duration-500">
         <div className="group h-56 w-80 relative flex overflow-hidden  ">
           <img
@@ -34,4 +35,4 @@ const BlogCard = ({ title, img }) => {
   );
 };
 
-export default BlogCard;
+export default FaqBottomCard;
