@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import EmailIcon from "@material-ui/icons/Email";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
@@ -15,7 +16,7 @@ const Navbar = () => {
   return (
     <>
       <div className="flex flex-col font-sans">
-        <div className="sm:flex-col xl-flex-row md:p-9 lg:px-44  justify-between  md:px-44 lg:p-4  p-4 mt-3 bg-blue-950 text-sm text-gray-400 flex flex-col gap-3 md:flex-col lg:flex-col xl:flex-row">
+        <div className="sm:flex-col xl-flex-row md:p-9 lg:px-44 justify-between md:px-44 lg:p-4 p-4 bg-blue-950 text-sm text-gray-400 flex flex-col gap-3 md:flex-col lg:flex-col xl:flex-row">
           <div className="flex md:flex-row gap-5 items-center justify-center ">
             <p className="hover:text-white">
               <PhoneIcon
