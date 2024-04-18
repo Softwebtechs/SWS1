@@ -5,6 +5,7 @@ import React, { useState } from "react";
 import { HiStar } from "react-icons/hi";
 import Carousel from "react-multi-carousel"
 import 'react-multi-carousel/lib/styles.css'
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const responsive = {
   superLargeDesktop: {
@@ -31,12 +32,12 @@ const Projects = () => {
 
   const Feedback=({image, name, about, rating}) => {
     return (
-      <div className="bg-blue-950 lg:h-[500px] h-[500px] ">
+      <div className="bg-blue-950 lg:h-[600px] h-[500px] ">
       <div className="flex flex-col gap-8 pt-[80px] pl-[100px] ">
         <img src={image}
         alt=''
         className="h-[100px] w-[100px] rounded-full border-gray-400 border-[6px] object-cover 
-         hover:border-orange-500" 
+         hover:border-orange-500 lg:mt-[60px]" 
         />
         <h1 className="text-white font-bold text-2xl">{name}</h1>
         <p className="text-gray-300 w-[600px] lg:w-[300px]">{about}</p>
@@ -55,17 +56,29 @@ const Projects = () => {
   const Card =({image, text}) =>{
     return (
       <div>
-        <div className="overflow-hidden my-0 mx-auto">
-          <img
-          src={image}
-          alt=''
-          className=" hoverImg h-[300px] w-[600px]"
-          />
-          <div className="bg-blue-950 py-3 text-white font-bold text-2xl flex justify-center">
+         <div className="group relative cursor-pointer my-0 mx-auto overflow-hidden ">
+         <img 
+         className="h-[300px] w-[600px] duration-500 group-hover:scale-150 " 
+         src={image} 
+         alt="" 
+         />
+         <div className="absolute inset-0 group-hover:bg-orange-600 opacity-[0.7]"></div>
+          <div className="absolute inset-0 flex translate-y-[-60%] flex-col items-center justify-center 
+            px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+           <p className="mb-3 text-2xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          {text}</p>
+          <p className="mt-4 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat</p>
+          <p className=" flex mt-6 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100 ">
+          View Details <MdKeyboardArrowRight className="mt-1.5"/> </p>
+          </div>
+       
+          <div className="bg-blue-950 py-3 text-white font-bold text-2xl flex justify-center ">
             {text}
           </div>
         </div>
-      </div>
+        </div>
+      
     )
   }
 
@@ -75,9 +88,9 @@ const Projects = () => {
       <h1 className="text-white lg:text-5xl text-3xl font-bold pl-[60px]">Projects</h1>
       <p className="text-slate-300 pr-[60px]">Home | Projects</p>
       </div>
-      <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center mt-[50px]">
     <div className="lg:w-[1400px] w-[800px] mt-[80px]">
-      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-5">
+      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-6">
         <h1 
         onClick={() => setActive('All')} 
         className={`cursor-pointer ${active==='All' ? 'text-orange-500' :'text-gray-500'} `} >
@@ -88,6 +101,7 @@ const Projects = () => {
         onClick={() => setActive('Machinery')} 
         className={` cursor-pointer ${active==='Machinery' ? 'text-orange-500' :'text-gray-500'} `} >
         Machinery
+        <a href="#"></a>
         </h1>
         <h1 
         onClick={() => setActive('Man Power')} 
@@ -107,7 +121,7 @@ const Projects = () => {
         </h1>
       </div>
      
-      <div className="w-full py-[0.5px] border-none  bg-gray-300"></div>
+      <div className="w-full py-[0.5px] border-none bg-gray-300"></div>
       <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 my-12 relative z-10">
         <Card
         image='/grinding.jpg'
@@ -145,19 +159,20 @@ const Projects = () => {
      
     </div>
     </div>
-    <div className="grid lg:grid-cols-2 grid-cols-1 mt-[70px] ">
-   
-      <div className=" bg-orange-600 mix-blend-overlay lg:h-[500px] h-[450px] flex flex-col justify-start items-start pl-[80px] ">
-        <h1 className="text-5xl font-bold  text-white mt-[100px]">From Our Client's Speak</h1>
-        <p className=" text-white text-lg mt-[50px]">Consumer Choice Award Winner For Best Industrial Production in the city of New Jersy</p>
-        <button className='bg-blue-950 shadow h-14 px-8 outline-none text-white hover:bg-white
-                 hover:text-blue-950 cursor-pointer text-base transition-bg hover:border hover:border-blue-950 mt-[50px]'>
-                 Read More 
-        </button>
-      </div>
-      
-      
-        <div>
+    <div className="grid lg:grid-cols-2 grid-cols-1 mt-[100px] ">
+    <div className="relative lg:h-[600px] h-[450px] overflow-hidden">
+  <img className=" lg:h-[600px] h-[450px] w-[1000px]" src="/servicing.jpg" alt="" />
+  <div className="absolute inset-0 bg-orange-600 opacity-[0.8]"></div>
+  <div className="absolute inset-0 flex flex-col justify-start items-start pl-[80px] lg:pl-[250px]">
+    <h1 className="text-5xl font-bold  text-white mt-[100px] lg:pt-[50px]">From Our Client's Speak</h1>
+    <p className=" text-white text-lg mt-[50px] lg:w-[450px]">Consumer Choice Award Winner For Best Industrial Production in the city of New Jersy</p>
+    <button className="bg-blue-950 shadow h-14 px-8 outline-none text-white hover:bg-white hover:text-blue-950 
+    cursor-pointer text-base transition-bg hover:border hover:border-blue-950 mt-[50px] lg:mt-[60px]">
+      Read More
+    </button>
+  </div>
+</div>
+      <div>
         <Carousel
         swipeable={true}
         draggable={false}

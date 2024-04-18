@@ -2,28 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.hoverImg {
-    width: 100%;
-    transition: 0.5s all ease-in-out;
-    
-  }
-
-  .hoverImg:hover {
-    transform: scale(1.5);
-    
-  }
-
-  .transition-bg {
-    transition: 0.5s all ease-in-out;
-  }
-  
-  .images::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .images {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
-  
