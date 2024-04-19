@@ -89,8 +89,8 @@ const Projects = () => {
       <p className="text-slate-300 pr-[60px]">Home | Projects</p>
       </div>
       <div className="flex justify-center items-center mt-[50px]">
-    <div className="lg:w-[1400px] w-[800px] mt-[80px]">
-      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-6">
+    <div className="lg:w-[1400px] w-[800px] 2xl:mt-[80px] mt-[50px] ">
+      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-6 px-8">
         <h1 
         onClick={() => setActive('All')} 
         className={`cursor-pointer ${active==='All' ? 'text-orange-500' :'text-gray-500'} `} >
@@ -121,8 +121,8 @@ const Projects = () => {
         </h1>
       </div>
      
-      <div className="w-full py-[0.5px] border-none bg-gray-300"></div>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 my-12 relative z-10">
+      <div className="2xl:w-[1340px] py-[0.5px] border-none bg-gray-300 ml-8 mr-8"></div>
+      <div className="grid xl:grid-cols-4 lg:grid-cols-3 lg:px-8 px-8 md:grid-cols-2 grid-cols-1 gap-6 my-12 relative z-10">
         <Card
         image='/grinding.jpg'
         text='Grinding'
@@ -163,10 +163,10 @@ const Projects = () => {
     <div className="relative lg:h-[600px] h-[450px] overflow-hidden">
   <img className=" lg:h-[600px] h-[450px] w-[1000px]" src="/servicing.jpg" alt="" />
   <div className="absolute inset-0 bg-orange-600 opacity-[0.8]"></div>
-  <div className="absolute inset-0 flex flex-col justify-start items-start pl-[80px] lg:pl-[250px]">
-    <h1 className="text-5xl font-bold  text-white mt-[100px] lg:pt-[50px]">From Our Client's Speak</h1>
-    <p className=" text-white text-lg mt-[50px] lg:w-[450px]">Consumer Choice Award Winner For Best Industrial Production in the city of New Jersy</p>
-    <button className="bg-blue-950 shadow h-14 px-8 outline-none text-white hover:bg-white hover:text-blue-950 
+  <div className="absolute inset-0 flex flex-col justify-start items-start 2xl:pl-[230px] ">
+    <h1 className="text-5xl font-bold  text-white mt-[100px] pl-[40px] lg:pt-[40px] ">From Our Client's Speak</h1>
+    <p className=" text-white text-lg mt-[50px] lg:w-[450px] pl-[40px]">Consumer Choice Award Winner For Best Industrial Production in the city of New Jersy</p>
+    <button className="bg-blue-950 shadow h-14 px-8 outline-none ml-[40px] text-white hover:bg-white hover:text-blue-950 
     cursor-pointer text-base transition-bg hover:border hover:border-blue-950 mt-[50px] lg:mt-[60px]">
       Read More
     </button>
