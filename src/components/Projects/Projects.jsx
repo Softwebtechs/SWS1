@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
@@ -26,9 +27,87 @@ const responsive = {
   },
 };
 
+const images =[
+  {
+      id:'1',
+      image:'/grinding.jpg',
+      text:'Grinding',
+      category:'Power Works',
+      all:'All'
+  },
+  {
+      id:'2',
+      image:'/subway.jpg',
+      text:'Subway',
+      category:'Oil Factory',
+      all:'All'
+  },
+  {
+      id:'3',
+      image:'/oil-storage.jpg',
+      text:'Oil Storage',
+      category:'Machinery',
+      all:'All'
+  },
+  {
+      id:'4',
+      image:'/welding.jpg',
+      text:'Welding Work',
+      category:'Man Power',  
+      all:'All'
+  },
+  {
+    id:'5',
+    image:'/construction.jpg',
+    text:'Construction Tools',
+    category:'Power Works',
+    all:'All'
+},
+{
+  id:'6',
+  image:'/servicing.jpg',
+  text:'Servicing',
+  category:'Oil Factory',
+  all:'All'
+},
+{
+  id:'7',
+  image:'/cloth.jpg',
+  text:'Cloth Making',
+  category:'Machinery',
+  all:'All'
+},
+{
+  id:'8',
+  image:'/oil-factory.jpg',
+  text:'Oil Factory',
+  category:'Man Power',
+  all:'All'
+},
+
+
+]
 
 const Projects = () => {
-  const [active, setActive] =useState('All')
+  // const [active, setActive] =useState('All')
+  const [items, setItems] =useState(images)
+
+  const filterItem = (categItem) => {
+    const updatedItems = images.filter((curElem) => {
+      return curElem.category ===categItem;
+    })
+    setItems(updatedItems);
+   
+  }
+  
+  const allItems = (allItem) =>{
+    const updateItem = images.filter((curElem) => {
+      return curElem.all === allItem;
+    })
+    setItems(updateItem);
+  }
+
+
 
   const Feedback=({image, name, about, rating}) => {
     return (
@@ -40,7 +119,7 @@ const Projects = () => {
          hover:border-orange-500 lg:mt-[60px]" 
         />
         <h1 className="text-white font-bold text-2xl">{name}</h1>
-        <p className="text-gray-300 w-[600px] lg:w-[300px]">{about}</p>
+        <p className="text-gray-300 w-[300px] sm:w-[500px] md:w-[600px] lg:w-[400px] 2xl:w-[300px]">{about}</p>
         <div className='pb-4 flex '>
 
         {[...Array(4)].map((_, index) => {
@@ -53,19 +132,62 @@ const Projects = () => {
     )
   }
 
-  const Card =({image, text}) =>{
-    return (
-      <div>
-         <div className="group relative cursor-pointer my-0 mx-auto overflow-hidden ">
-         <img 
-         className="h-[300px] w-[600px] duration-500 group-hover:scale-150 " 
-         src={image} 
-         alt="" 
-         />
-         <div className="absolute inset-0 group-hover:bg-orange-600 opacity-[0.7]"></div>
+  
+  return (
+    <div>
+      <div className="bg-blue-950 lg:py-16 py-10 flex justify-between items-center">
+      <h1 className="text-white lg:text-5xl text-3xl font-bold pl-[60px]">Projects</h1>
+      <p className="text-slate-300 pr-[60px]">Home | Projects</p>
+      </div>
+      <div className="flex justify-center items-center mt-[50px]">
+      <div className="lg:w-[1400px] w-[800px] 2xl:mt-[80px] mt-[50px] ">
+      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-6 px-8">
+        <h1 
+        onClick={() => allItems('All')}
+        className="cursor-pointer hover:text-orange-500 text-gray-500">All
+        </h1>
+
+        <h1 
+        onClick={() =>  filterItem('Machinery')} 
+        className="cursor-pointer hover:text-orange-500 text-gray-500">Machinery
+        </h1>
+
+        <h1 
+        onClick={() =>  filterItem('Man Power')} 
+        className="cursor-pointer hover:text-orange-500 text-gray-500">Man Power
+        </h1>
+
+        <h1 
+        onClick={() =>  filterItem('Oil Factory')} 
+        className="cursor-pointer hover:text-orange-500 text-gray-500">Oil Factory
+        </h1>
+
+        <h1 
+        onClick={() => filterItem('Power Works')} 
+        className="cursor-pointer hover:text-orange-500 text-gray-500">Power Works
+        </h1>
+      </div>
+     
+      <div className="2xl:w-[1340px] py-[0.5px] border-none bg-gray-300 ml-8 mr-8"></div>
+      <div className="grid 2xl:grid-cols-4 lg:grid-cols-3 lg:px-8 px-8 md:grid-cols-2 grid-cols-1 gap-6 my-12 mx-4 relative z-10">
+
+      {
+        items.map((elem) => {
+          const {id, text, image} =elem;
+
+          return(
+          <div>
+          <div className="group relative cursor-pointer my-0 mx-auto overflow-hidden ">
+          <img 
+          className="h-[300px] w-[600px] duration-500 group-hover:scale-150 " 
+          src={image} 
+          alt="" 
+          id={id}
+          />
+          <div className="absolute inset-0 group-hover:bg-orange-600 opacity-[0.7]"></div>
           <div className="absolute inset-0 flex translate-y-[-60%] flex-col items-center justify-center 
             px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-           <p className="mb-3 text-2xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+          <p className="mb-3 text-2xl font-bold text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           {text}</p>
           <p className="mt-4 text-lg text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dolore adipisci placeat</p>
@@ -77,93 +199,16 @@ const Projects = () => {
             {text}
           </div>
         </div>
-        </div>
-      
-    )
-  }
-
-  return (
-    <div>
-      <div className="bg-blue-950 lg:py-16 py-10 flex justify-between items-center">
-      <h1 className="text-white lg:text-5xl text-3xl font-bold pl-[60px]">Projects</h1>
-      <p className="text-slate-300 pr-[60px]">Home | Projects</p>
       </div>
-      <div className="flex justify-center items-center mt-[50px]">
-    <div className="lg:w-[1400px] w-[800px] 2xl:mt-[80px] mt-[50px] ">
-      <div className="flex flex-row justify-start gap-10 items-center lg:text-xl text-lg font-bold  pb-6 px-8">
-        <h1 
-        onClick={() => setActive('All')} 
-        className={`cursor-pointer ${active==='All' ? 'text-orange-500' :'text-gray-500'} `} >
-        All
-        </h1>
-
-        <h1 
-        onClick={() => setActive('Machinery')} 
-        className={` cursor-pointer ${active==='Machinery' ? 'text-orange-500' :'text-gray-500'} `} >
-        Machinery
-        <a href="#"></a>
-        </h1>
-        <h1 
-        onClick={() => setActive('Man Power')} 
-        className={`cursor-pointer ${active==='Man Power' ? 'text-orange-500' :'text-gray-500'} `} >
-        Man Power
-        </h1>
-
-         <h1 
-        onClick={() => setActive('Oil Factory')} 
-        className={`cursor-pointer ${active==='Oil Factory' ? 'text-orange-500' :'text-gray-500'} `} >
-        Oil Factory
-        </h1>
-        <h1 
-        onClick={() => setActive('Power Works')} 
-        className={`cursor-pointer ${active==='Power Works' ? 'text-orange-500' :'text-gray-500'} `} >
-        Power Works
-        </h1>
-      </div>
-     
-      <div className="2xl:w-[1340px] py-[0.5px] border-none bg-gray-300 ml-8 mr-8"></div>
-      <div className="grid xl:grid-cols-4 lg:grid-cols-3 lg:px-8 px-8 md:grid-cols-2 grid-cols-1 gap-6 my-12 relative z-10">
-        <Card
-        image='/grinding.jpg'
-        text='Grinding'
-        />
-        <Card
-        image='/subway.jpg'
-        text='Subway'
-        />
-        <Card
-        image='/oil-storage.jpg'
-        text='Oil Storage'
-        />
-        <Card
-        image='/welding.jpg'
-        text='Welding Work'
-        />
-        <Card
-        image='/construction.jpg'
-        text='Construction Tools'
-        />
-        <Card
-        image='/servicing.jpg'
-        text='Servicing'
-        />
-        <Card
-        image='/cloth.jpg'
-        text='Cloth Making'
-        />
-        <Card
-        image='/oil-factory.jpg'
-        text='Oil Factory'
-        />
-      </div>
-     
+    )})}
+     </div>
     </div>
-    </div>
+  </div>
     <div className="grid lg:grid-cols-2 grid-cols-1 mt-[100px] ">
     <div className="relative lg:h-[600px] h-[450px] overflow-hidden">
-  <img className=" lg:h-[600px] h-[450px] w-[1000px]" src="/servicing.jpg" alt="" />
-  <div className="absolute inset-0 bg-orange-600 opacity-[0.8]"></div>
-  <div className="absolute inset-0 flex flex-col justify-start items-start 2xl:pl-[230px] ">
+    <img className=" lg:h-[600px] h-[450px] w-[1000px]" src="/servicing.jpg" alt="" />
+    <div className="absolute inset-0 bg-orange-600 opacity-[0.8]"></div>
+    <div className="absolute inset-0 flex flex-col justify-start items-start 2xl:pl-[230px] ">
     <h1 className="text-5xl font-bold  text-white mt-[100px] pl-[40px] lg:pt-[40px] ">From Our Client's Speak</h1>
     <p className=" text-white text-lg mt-[50px] lg:w-[450px] pl-[40px]">Consumer Choice Award Winner For Best Industrial Production in the city of New Jersy</p>
     <button className="bg-blue-950 shadow h-14 px-8 outline-none ml-[40px] text-white hover:bg-white hover:text-blue-950 
