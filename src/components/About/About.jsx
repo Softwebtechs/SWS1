@@ -237,7 +237,7 @@ const Card2 =({image, title, num, text}) =>{
      {/* {chart part} */}
         <div className="grid lg:grid-cols-2 grid-cols-1 mt-[100px] 2xl:h-[650px] ">
 
-          <div className="bg-orange-600 pb-[100px] 2xl:px-[110px] px-[120px]">
+          <div className="bg-orange-600 pb-[100px] 2xl:px-[110px] ">
            <div className="w-[600px] px-[60px] flex flex-col justify-start items-start ">
           <h1 className="text-lg font-semibold text-blue-900 mt-[80px] lg:pt-[20px] ">Why Choose Us?</h1>
           <p className=" text-white font-semibold text-4xl mt-[30px] 2xl:w-[600px] sm:w-[400px]">
