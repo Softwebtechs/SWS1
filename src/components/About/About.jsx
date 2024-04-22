@@ -345,7 +345,7 @@ const Card2 =({image, title, num, text}) =>{
     <div className="absolute inset-0 flex flex-col justify-center items-center">
     <h1 className="lg:text-6xl text-4xl text-center  font-bold text-white">Power over you and your competitors?</h1>
     <p className=" text-white text-lg mt-[50px] w-[500px]  text-center lg:w-[650px]">Clients count on us every day to help transform uncertainty into possibility.</p>
-    <button className="bg-orange-600 shadow h-14 px-12 outline-none  text-white hover:bg-white hover:text-blue-950 
+    <button className="bg-orange-600 shadow h-14 px-12 outline-none  text-white hover:bg-blue-950 hover:text-white 
     cursor-pointer text-base transition-bg hover:border hover:border-orange-600 mt-[50px] lg:mt-[60px]">
       Send Message
     </button>
