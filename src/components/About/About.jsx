@@ -10,6 +10,7 @@ import { IoBulbOutline } from "react-icons/io5";
 import { GrUserWorker } from "react-icons/gr";
 import React from "react";
 import { FaFacebook, FaGoogle, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import { BsPlusLg } from "react-icons/bs";
 
 
 const data = [
@@ -59,26 +60,46 @@ const SmallCard =({num, icon, text}) => {
 
 const Card1= ({image, name, title, icon1, icon2, icon3, icon4 }) =>{
            return (
-
-            <div className="group relative cursor-pointer pt-3 2xl:w-[300px] w-[250px] overflow-hidden">
-             <div>
-             <div className=" absolute inset-0 flex translate-y-[-100%] flex-col items-center justify-center 
-            px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-             <div className="bg-blue-900 opacity-[0.7] h-[600px] w-[300px]"></div>
+            <div className="group flex flex-col justify-center items-center">
+            <div className=" relative cursor-pointer pt-3 2xl:w-[300px] w-[250px] overflow-hidden">
+            <div className="h-[325px] overflow-hidden">
+            <div className=" absolute inset-0 flex translate-y-[-100%] flex-col items-center justify-center 
+               px-9 text-center transition-all duration-500 group-hover:translate-y-0 ">
+              <div className="group bg-blue-900 opacity-[0.7] h-[400px] w-[300px]">
+              <div className="flex justify-center items-center mt-[120px]">
+              <BsPlusLg className="text-gray-500 font-extralight
+             h-[80px] w-[80px]  group-hover:rotate-180 "/>
+           </div>
+              </div>
             </div> 
-              <img 
+            <img 
               src={image} 
               alt=''
               className="h-[325px] w-[300px]  2xl:w-[600px] mb-7"
               />
+            </div>
+          </div>
+               
+               
+              <div className=" relative cursor-pointer pt-3 2xl:w-[300px] w-[250px] overflow-hidden">
+              <div>
+               <div className=" absolute inset-0 flex translate-y-[-100%] flex-col items-center justify-center 
+               px-9 text-center transition-all duration-500 group-hover:translate-y-0 ">
+               
+              <div className="bg-orange-600  h-[800px] w-[300px]">
+              <div className="">
+              <h1 className="text-white font-semibold text-3xl mb-2 flex flex-1 justify-center pb-2 pt-3">{name}</h1>
+              <p className="text-blue-950 text-lg flex justify-center pb-6">{title}</p>
+              <div className="flex flex-row justify-center items-center gap-7">
+               <p className="text-white ">{icon1}</p>
+               <p className="text-white ">{icon2}</p>
+               <p className="text-white ">{icon3}</p>
+               <p className="text-white ">{icon4}</p>
               </div>
-              
-                {/* <div className="absolute inset-0 group-hover:bg-orange-600 opacity-[0.7]"></div>
-          <div className="absolute inset-0 flex translate-y-[-60%] flex-col items-center justify-center 
-            px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <p>hi</p>
-            </div> */}
-            
+                </div>
+              </div>
+              </div> 
+
               <h1 className="text-blue-950 font-semibold text-3xl mb-2 flex flex-1 justify-center pb-2 pt-1">{name}</h1>
               <p className="text-orange-600 text-lg flex justify-center pb-6">{title}</p>
               <div className="flex flex-row justify-center items-center gap-7">
@@ -87,8 +108,10 @@ const Card1= ({image, name, title, icon1, icon2, icon3, icon4 }) =>{
                <p className="text-slate-400 ">{icon3}</p>
                <p className="text-slate-400 ">{icon4}</p>
               </div>
-              <div className="bg-slate-300 group-hover:bg-blue-900 py-[1px] border-none mt-12"></div>
               </div>
+            <div className="bg-slate-300 group-hover:bg-blue-900 py-[1px] border-none mt-12"></div>
+            </div>
+          </div>
            
            )
 }
@@ -117,11 +140,20 @@ const Card2 =({image, title, num, text}) =>{
 
 
   return (
+    
  <div className="">
-   <div className="bg-blue-950 lg:py-16 py-12 flex md:flex-row flex-col md:justify-between justify-center items-center">
-    <h1 className="text-white lg:text-5xl text-3xl font-bold pl-[60px]">About Us</h1>
-    <p className="text-slate-300 pr-[60px]">Home | About Us</p>
-    </div>
+       <div className="md:h-[170px] h-56 bg-blue-950  md:flex-row  md:justify-between px-48 md:px-10 xl:px-28 items-center flex flex-col gap-6 justify-center">
+        <h1 className="text-white font-semibold md:text-4xl xl:text-5xl text-5xl">
+          About Us
+        </h1>
+        <div className="text-white md:flex-row flex-col">
+          <div className="flex flex-row gap-5 ">
+            <h1 className="text-lg text-gray-300">Home</h1>
+            <p>|</p>
+            <h1 className="text-lg text-gray-300">About Us</h1>
+          </div>
+        </div>
+      </div>
 
      <div className="max-w-[1400px] mx-auto ">
     <div className="px-[130px]  xl:flex justify-between items-center 2xl:gap-[100px] gap-[60px] py-[100px]  ">
@@ -245,20 +277,17 @@ const Card2 =({image, title, num, text}) =>{
           <BarGraph data={data}  />
           </div>
          </div>
-
-         <div>
+          <div>
          <img src='/servicing.jpg' alt='' 
          className="lg:h-[650px] h-[450px] w-[1000px]"
           />
          </div>
+          </div>
 
-        </div>
+       {/* {images part} */}
 
-
-
-  {/* {images part} */}
-  <div className="flex justify-center items-center">
-      <div className="max-w-[1400px] mx-auto relative z-10 2xl:mt-[10px] mt-[100px] mb-[100px]">
+       <div className="flex justify-center items-center">
+       <div className="max-w-[1400px] mx-auto relative z-10 2xl:mt-[10px] mt-[20px] mb-[100px]">
        <div className="flex flex-col justify-center items-center pt-[120px] pb-[60px] gap-2">
        <h1 className="text-blue-900 text-5xl font-bold">Our Expert for</h1>
        <h1 className="text-orange-600  text-5xl font-bold"> Different Solutions</h1>
@@ -306,9 +335,8 @@ const Card2 =({image, title, num, text}) =>{
         />
 
        </div>
-
-       </div>
-      </div>
+    </div>
+  </div>
 
 
    <div className="relative lg:h-[500px] h-[550px] overflow-hidden">
@@ -322,7 +350,7 @@ const Card2 =({image, title, num, text}) =>{
       Send Message
     </button>
    </div>
-  </div>
+  </div> 
             
             {/* {second image part}   */}
 
@@ -361,17 +389,10 @@ const Card2 =({image, title, num, text}) =>{
               Ut eget tempor turpis, eget accumsan odio metus vitae commodo auctor, ex urna.'
               />
                </div>
+            </div>
          </div>
-         </div>
-        
-        
-        
-        
-        
-        </div>
-    
- 
-  );
+     </div>
+   );
 };
 
 export default About;
