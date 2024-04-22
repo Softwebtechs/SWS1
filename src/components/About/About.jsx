@@ -338,7 +338,7 @@ const Card2 =({image, title, num, text}) =>{
 
           <div className="mx-[80px] grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-8">
             <Card2
-              image='/cloth.jpg'
+              image='/storage-hall.jpg'
               title='Storage Hall'
               num='01'
               text='Cras est tellus, tincidunt eu ornare et, euismod sit amet sem. 
@@ -346,7 +346,7 @@ const Card2 =({image, title, num, text}) =>{
               />
 
              <Card2
-              image='/servicing.jpg'
+              image='/grinding-work.jpg'
               title='Griding Works'
               num='02'
               text='Cras est tellus, tincidunt eu ornare et, euismod sit amet sem. 
@@ -354,7 +354,7 @@ const Card2 =({image, title, num, text}) =>{
               />
 
              <Card2
-              image='/oil-factory.jpg'
+              image='/plan-discussion.jpg'
               title='Plan Discussion'
               num='03'
               text='Cras est tellus, tincidunt eu ornare et, euismod sit amet sem. 
