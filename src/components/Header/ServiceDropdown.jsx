@@ -4,8 +4,8 @@ import { NavLink } from "react-router-dom";
 const ServiceDropdown = () => {
     return (
         <>
-            <div className=" w-56 h-12  bg-transparent absolute   " />
-            <div className="absolute    w-56 z-10   shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition duration-700 ">
+            <div className=" w-56 h-12  bg-transparent    " />
+            <div className="h-auto    w-56    shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition duration-700 ">
                 <div className="py-1 flex flex-col gap-2" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                     <NavLink
                         to="/electronic"

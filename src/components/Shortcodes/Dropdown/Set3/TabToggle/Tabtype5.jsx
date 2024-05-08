@@ -1,0 +1,140 @@
+// App.js
+import React, { useState } from 'react';
+
+const Tab = ({ title, isActive, onClick }) => {
+    return (
+        <button
+            style={{
+                color: isActive ? 'white' : 'black',
+                backgroundColor: isActive ? 'orange' : '#d3d3d3',
+                padding: '8px 16px',
+                borderRadius: '1px',
+                cursor: 'pointer',
+
+                // Conditional full border
+                zIndex: isActive ? '1' : '0', // Ensure active tab border is on top
+                position: 'relative', // Ensure zIndex works
+            }}
+            onClick={onClick}
+        >
+            {title}
+        </button>
+    );
+};
+
+const TabContent = ({ isActive, children }) => {
+    return <div style={{ display: isActive ? 'block' : 'none' }}>{children}</div>;
+};
+
+const Tabtype5 = () => {
+    const [activeTab, setActiveTab] = useState('tab1');
+
+    const openTab = (tabName) => {
+        setActiveTab(tabName);
+    };
+
+    return (
+        <>
+            <div className="flex flex-col justify-center items-center md:gap-10 gap-7 font-poppins mt-20">
+                <h1 className="md:text-5xl text-3xl w-full font-bold text-orange-500 flex justify-center gap-4 ">
+                    HORIZONTAL TABS <span className="text-blue-950">TYPE 5</span>
+                </h1>
+            </div>
+            <div className="container mx-auto p-4 md:px-44 px-14 md:max-lg:px-10 lg:max-xl:px-20"> {/* Container with border */}
+                <div className="flex  text-xl text-gray-500 font-semibold">
+                    <Tab
+                        title="Tab 1"
+                        isActive={activeTab === 'tab1'}
+                        onClick={() => openTab('tab1')}
+                    />
+                    <Tab
+                        title="Tab 2"
+                        isActive={activeTab === 'tab2'}
+                        onClick={() => openTab('tab2')}
+                    />
+                    <Tab
+                        title="Tab 3"
+                        isActive={activeTab === 'tab3'}
+                        onClick={() => openTab('tab3')}
+                    />
+                </div>
+                <div className="border h-full w-full border-gray-300 mb-5 px-6">
+                    <div >
+                        <TabContent isActive={activeTab === 'tab1'}>
+                            <div class="flex flex-col gap-7 mt-7">
+                                <h1 class="text-3xl font-poppins font-bold">Education</h1>
+                                <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <div class="lg:flex lg:flex-row flex flex-col gap-7">
+                                    <div class="flex flex-col  font-semibold text-l md:w-[700px] mt-5 gap-5">
+                                        <h1 class="text-3xl font-poppins font-bold">Lorem ipsum dolor sit amet, consectetur</h1>
+                                        <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam id arcu tortor. Sed get sit ame egestasquis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+                                        <ul class="mt-4 list-disc px-5">
+                                            <li class="text-gray-500">Shoulder</li>
+                                            <li class="mt-3 text-gray-500">Elbow</li>
+                                            <li class="mt-3 text-gray-500">Hand & Wrist.</li>
+                                            <li class="mt-3 text-gray-500">Spine</li>
+                                            <li class="mt-3 text-gray-500">Hip</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-[400px] h-96">
+                                        <img src="https://patrai.wpengine.com/wp-content/uploads/2019/04/tab5-1.jpg" alt="" class="w-[400px] h-96" />
+                                    </div>
+                                </div>
+                            </div>
+                        </TabContent>
+                        <TabContent isActive={activeTab === 'tab2'}>
+                            <div class="flex flex-col gap-7 mt-7">
+                                <h1 class="text-3xl font-poppins font-bold">Education</h1>
+                                <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <div class="lg:flex lg:flex-row flex flex-col gap-7">
+                                    <div class="w-[400px] h-96">
+                                        <img src="https://patrai.wpengine.com/wp-content/uploads/2019/04/tab5-2.jpg" alt="" class="w-[400px] h-96" />
+                                    </div>
+                                    <div class="flex flex-col  font-semibold text-l md:w-[700px] mt-5 gap-5">
+                                        <h1 class="text-3xl font-poppins font-bold">Lorem ipsum dolor sit amet, consectetur</h1>
+                                        <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam id arcu tortor. Sed get sit ame egestasquis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+                                        <ul class="mt-4 list-disc px-5">
+                                            <li class="text-gray-500">Shoulder</li>
+                                            <li class="mt-3 text-gray-500">Elbow</li>
+                                            <li class="mt-3 text-gray-500">Hand & Wrist.</li>
+                                            <li class="mt-3 text-gray-500">Spine</li>
+                                            <li class="mt-3 text-gray-500">Hip</li>
+                                        </ul>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </TabContent>
+                        <TabContent isActive={activeTab === 'tab3'}>
+                            <div class="flex flex-col gap-7 mt-7">
+                                <h1 class="text-3xl font-poppins font-bold">Education</h1>
+                                <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                                <div class="lg:flex lg:flex-row flex flex-col gap-7">
+                                    <div class="flex flex-col  font-semibold text-l md:w-[700px] mt-5 gap-5">
+                                        <h1 class="text-3xl font-poppins font-bold">Lorem ipsum dolor sit amet, consectetur</h1>
+                                        <p className="text-gray-500 ">Lorem ipsum dolor sit amet, consectetur adipis cing elit. Nullam id arcu tortor. Sed get sit ame egestasquis. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
+
+                                        <ul class="mt-4 list-disc px-5">
+                                            <li class="text-gray-500">Shoulder</li>
+                                            <li class="mt-3 text-gray-500">Elbow</li>
+                                            <li class="mt-3 text-gray-500">Hand & Wrist.</li>
+                                            <li class="mt-3 text-gray-500">Spine</li>
+                                            <li class="mt-3 text-gray-500">Hip</li>
+                                        </ul>
+                                    </div>
+                                    <div class="w-[400px] h-96">
+                                        <img src="https://patrai.wpengine.com/wp-content/uploads/2019/04/tab5-3.jpg" alt="" class="w-[400px] h-96" />
+                                    </div>
+                                </div>
+                            </div>
+                        </TabContent>
+                    </div>
+                </div>
+            </div>
+        </>
+    );
+};
+
+export default Tabtype5;

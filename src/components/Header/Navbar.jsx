@@ -12,11 +12,13 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 
 import ServiceDropdown from './ServiceDropdown';
+import ShortcodesDropdown from './ShortcodesDropdown';
 
 
 const Navbar = () => {
 
   const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [isOpenShortcodes, setIsOpenShortCodes] = useState(false);
 
   const handleMouseEnter = () => {
     setDropdownVisible(true);
@@ -26,6 +28,12 @@ const Navbar = () => {
     setDropdownVisible(false);
   };
 
+  const handleMouseEnterShortcodes = () => {
+    setIsOpenShortCodes(true);
+  };
+  const handleMouseLeaveShortcodes = () => {
+    setIsOpenShortCodes(false);
+  };
   return (
     <>
       <div className="flex flex-col font-roboto">
@@ -149,9 +157,7 @@ const Navbar = () => {
                 </NavLink>
               </li>
               <li
-                className="menu"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+
               >
                 <NavLink
                   to="/services"
@@ -159,17 +165,28 @@ const Navbar = () => {
                     `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-500 underline" : "text-gray-500"
                     }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500 hover:underline lg:p-0`
                   }
+
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
                 >
 
                   SERVICES
+                  <div className="relative ">
+                    {isDropdownVisible && (
+                      <div
+                        className="absolute z-10 top-full left-0 "
+                        onMouseEnter={handleMouseEnter}
+                        onMouseLeave={handleMouseLeave}
+                      >
+                        <ServiceDropdown />
+                      </div>
 
+
+
+                    )}
+                  </div>
                 </NavLink>
 
-                {isDropdownVisible && (
-                  <div>
-                    <ServiceDropdown />
-                  </div>
-                )}
               </li>
               <li>
                 <NavLink
@@ -213,6 +230,33 @@ const Navbar = () => {
                   }
                 >
                   CONTACT
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/shortcodes"
+                  className={({ isActive }) =>
+                    `block py-2 pr-4 pl-3 duration-200 ${isActive ? "text-orange-500 underline" : "text-gray-500"
+                    }  border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 hover:text-orange-500  hover:underline lg:p-0`
+                  }
+                  onMouseEnter={handleMouseEnterShortcodes}
+                  onMouseLeave={handleMouseLeaveShortcodes}
+                >
+                  SHORTCODES
+                  <div className="relative ">
+                    {isOpenShortcodes && (
+                      <div
+                        className="absolute z-10 top-full left-0 "
+                        onMouseEnter={handleMouseEnterShortcodes}
+                        onMouseLeave={handleMouseLeaveShortcodes}
+                      >
+                        <ShortcodesDropdown />
+                      </div>
+
+
+
+                    )}
+                  </div>
                 </NavLink>
               </li>
               <div className="flex gap-3">
